@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Advicee/Pods-Advicee-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/BRQBottomSheet/BRQBottomSheet.framework
+${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework
+${BUILT_PRODUCTS_DIR}/RandomColorSwift/RandomColorSwift.framework

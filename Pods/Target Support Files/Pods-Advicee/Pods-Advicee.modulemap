@@ -1,0 +1,6 @@
+framework module Pods_Advicee {
+  umbrella header "Pods-Advicee-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,24 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ALG-Jz-Mhz">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Italic.ttf">
+            <string>Roboto-Italic</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Home Nav Controller-->
+        <scene sceneID="VgY-xf-AWs">
+            <objects>
+                <navigationController id="ALG-Jz-Mhz" customClass="HomeNavController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FkR-f5-1YP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mx-qM-vLl">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eHm-Sa-9pB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CgF-pY-Qns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-788" y="94"/>
+        </scene>
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0tY-fe-22a">
+                                <rect key="frame" x="137.33333333333331" y="223" width="139.33333333333331" height="52"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you are" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx5-6P-DcF">
+                                        <rect key="frame" x="9.3333333333333215" y="0.0" width="120.66666666666669" height="26"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Italic" family="Roboto" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a great Advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhW-Ls-O23">
+                                        <rect key="frame" x="0.0" y="26" width="139.33333333333334" height="26"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Advice Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu1-xo-H2F">
+                                <rect key="frame" x="10" y="481" width="394" height="40"/>
+                                <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgn-I3-3Ts">
+                                <rect key="frame" x="354" y="150" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EyV-Gh-7ej"/>
+                                    <constraint firstAttribute="width" constant="50" id="ySe-5b-D8t"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="B"/>
+                                <connections>
+                                    <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7d3-jY-Fq0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with love in Alex, Egypt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dH-qY-SFo">
+                                <rect key="frame" x="20" y="805" width="374" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHj-gt-EkS">
+                                <rect key="frame" x="10" y="150" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6MY-WL-gTB"/>
+                                    <constraint firstAttribute="width" constant="50" id="Ylz-th-kPT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="B2"/>
+                                <connections>
+                                    <action selector="didTapRefresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9lg-rV-ipQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="4dH-qY-SFo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="177-K6-Tdt"/>
+                            <constraint firstItem="4dH-qY-SFo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="75f-ll-ivC"/>
+                            <constraint firstItem="xHj-gt-EkS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Aao-FA-vSh"/>
+                            <constraint firstItem="cu1-xo-H2F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Doh-fF-pnf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4dH-qY-SFo" secondAttribute="bottom" constant="40" id="GZY-XX-pIj"/>
+                            <constraint firstItem="0tY-fe-22a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MDP-1i-2sQ"/>
+                            <constraint firstItem="cu1-xo-H2F" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Nud-NF-Xsx"/>
+                            <constraint firstItem="xHj-gt-EkS" firstAttribute="centerY" secondItem="wgn-I3-3Ts" secondAttribute="centerY" id="Tm1-5f-I5x"/>
+                            <constraint firstItem="cu1-xo-H2F" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UUc-7Q-pbk"/>
+                            <constraint firstItem="0tY-fe-22a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="83" id="Vws-x6-68U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wgn-I3-3Ts" secondAttribute="trailing" constant="10" id="Xwk-ZW-jaM"/>
+                            <constraint firstItem="wgn-I3-3Ts" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ZEF-SN-206"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4dH-qY-SFo" secondAttribute="trailing" constant="20" id="etM-6v-THj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cu1-xo-H2F" secondAttribute="trailing" constant="10" id="lEF-LI-vZM"/>
+                            <constraint firstItem="xHj-gt-EkS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="oGB-hD-Bmq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iXO-xJ-zgc"/>
+                    <connections>
+                        <outlet property="adviceLabel" destination="cu1-xo-H2F" id="mR2-SX-E09"/>
+                        <outlet property="refreshButton" destination="xHj-gt-EkS" id="DgO-Sy-5fb"/>
+                        <outlet property="settingsButton" destination="wgn-I3-3Ts" id="Kvo-wr-qmM"/>
+                        <segue destination="FiH-fi-3b6" kind="show" id="BmE-NR-MZE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="aVg-o3-UzZ">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="FiH-fi-3b6" customClass="SettingsViewController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cp0-68-W9L">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VwP-ad-Djk">
+                                <rect key="frame" x="0.0" y="150" width="414" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="FiH-fi-3b6" id="zMp-Md-IZW"/>
+                                    <outlet property="delegate" destination="FiH-fi-3b6" id="gaf-iX-gIL"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ah1-RR-fHv"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="VwP-ad-Djk" firstAttribute="trailing" secondItem="ah1-RR-fHv" secondAttribute="trailing" id="HcW-qX-c9K"/>
+                            <constraint firstItem="VwP-ad-Djk" firstAttribute="leading" secondItem="ah1-RR-fHv" secondAttribute="leading" id="Z1X-Wp-uMD"/>
+                            <constraint firstAttribute="bottom" secondItem="VwP-ad-Djk" secondAttribute="bottom" id="eoj-2w-XSd"/>
+                            <constraint firstItem="VwP-ad-Djk" firstAttribute="top" secondItem="ah1-RR-fHv" secondAttribute="top" constant="10" id="n6H-lV-nqL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="518-lG-nVV"/>
+                    <connections>
+                        <outlet property="tableView" destination="VwP-ad-Djk" id="8tT-Qs-EwH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ly-TO-d2a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908.69565217391312" y="93.75"/>
+        </scene>
+        <!--Change Time Interval View Controller-->
+        <scene sceneID="WE9-D3-SHA">
+            <objects>
+                <viewController storyboardIdentifier="ChangeTimeIntervalViewController" id="MF9-rE-Ois" customClass="ChangeTimeIntervalViewController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nfv-r2-dLi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1800" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRC-PG-45R">
+                                <rect key="frame" x="20" y="646" width="374" height="216"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="timeDidChange:event:" destination="MF9-rE-Ois" eventType="valueChanged" id="2en-Zp-F6D"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your advice will be delivered every" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF0-9J-Qd0">
+                                <rect key="frame" x="20" y="115" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Time Interval" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiZ-RT-iAc">
+                                <rect key="frame" x="20" y="147" width="374" height="37.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This the time interval that we will send you a new and great advice at" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-qt-YzZ">
+                                <rect key="frame" x="20" y="429.66666666666669" width="374" height="47"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jgb-tA-LYQ"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="cXb-qt-YzZ" secondAttribute="trailing" constant="20" id="0WM-Ok-PBR"/>
+                            <constraint firstItem="PF0-9J-Qd0" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="9vQ-8b-21x"/>
+                            <constraint firstItem="PF0-9J-Qd0" firstAttribute="centerX" secondItem="jgb-tA-LYQ" secondAttribute="centerX" id="Qc0-06-vyZ"/>
+                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="UYz-G2-MsV"/>
+                            <constraint firstItem="oRC-PG-45R" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="X8O-To-1MP"/>
+                            <constraint firstItem="PF0-9J-Qd0" firstAttribute="top" secondItem="jgb-tA-LYQ" secondAttribute="top" constant="71" id="YLh-H7-MCp"/>
+                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="centerX" secondItem="jgb-tA-LYQ" secondAttribute="centerX" id="f13-5e-6yf"/>
+                            <constraint firstItem="CiZ-RT-iAc" firstAttribute="top" secondItem="PF0-9J-Qd0" secondAttribute="bottom" constant="8" id="i92-v8-ZWX"/>
+                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="centerY" secondItem="jgb-tA-LYQ" secondAttribute="centerY" id="mLh-Hd-c7J"/>
+                            <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="CiZ-RT-iAc" secondAttribute="trailing" constant="20" id="oG2-Ne-QmD"/>
+                            <constraint firstItem="CiZ-RT-iAc" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="vBN-Tq-mEt"/>
+                            <constraint firstItem="jgb-tA-LYQ" firstAttribute="bottom" secondItem="oRC-PG-45R" secondAttribute="bottom" id="vh8-oq-reu"/>
+                            <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="oRC-PG-45R" secondAttribute="trailing" constant="20" id="xni-cJ-1Jm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timeLabel" destination="CiZ-RT-iAc" id="uzv-Yv-uVf"/>
+                        <outlet property="timePicker" destination="oRC-PG-45R" id="NYl-Uc-GKk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZBM-GE-i9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1957.9710144927537" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

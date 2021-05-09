@@ -3,27 +3,81 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1CE945FBBCB220F6B1B49D26 /* Pods_Advicee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6A04643C64266A7F98727C /* Pods_Advicee.framework */; };
+		DE4B35F12646A4920025AE55 /* SwitchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B35EF2646A4920025AE55 /* SwitchTableCell.swift */; };
+		DE4B35F22646A4920025AE55 /* SwitchTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4B35F02646A4920025AE55 /* SwitchTableCell.xib */; };
+		DE4B35F52646B41B0025AE55 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B35F42646B41B0025AE55 /* NotificationManager.swift */; };
+		DE4B35F92646CE900025AE55 /* Obeservables.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B35F82646CE900025AE55 /* Obeservables.swift */; };
+		DE4B35FC2646CEA90025AE55 /* ColorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B35FB2646CEA90025AE55 /* ColorsManager.swift */; };
+		DE4B36082646F1930025AE55 /* TableViewCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B36072646F1930025AE55 /* TableViewCellProtocols.swift */; };
+		DE4B3618264706FB0025AE55 /* ChangeTimeIntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */; };
+		DE8C25AC2648567400CDE929 /* ListTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8C25AA2648567400CDE929 /* ListTileCell.swift */; };
+		DE8C25AD2648567400CDE929 /* ListTileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8C25AB2648567400CDE929 /* ListTileCell.xib */; };
 		DECD5CB62645FA4000864C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CB52645FA4000864C37 /* AppDelegate.swift */; };
 		DECD5CB82645FA4000864C37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CB72645FA4000864C37 /* SceneDelegate.swift */; };
-		DECD5CBA2645FA4000864C37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CB92645FA4000864C37 /* ViewController.swift */; };
+		DECD5CBA2645FA4000864C37 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CB92645FA4000864C37 /* HomeViewController.swift */; };
 		DECD5CBD2645FA4000864C37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CBB2645FA4000864C37 /* Main.storyboard */; };
 		DECD5CBF2645FA4100864C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CBE2645FA4100864C37 /* Assets.xcassets */; };
 		DECD5CC22645FA4100864C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CC02645FA4100864C37 /* LaunchScreen.storyboard */; };
+		DECD5CDC2645FC7500864C37 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CDB2645FC7500864C37 /* Extensions.swift */; };
+		DECD5CEB2645FECB00864C37 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CDF2645FECB00864C37 /* Roboto-ThinItalic.ttf */; };
+		DECD5CEC2645FECB00864C37 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE02645FECB00864C37 /* Roboto-MediumItalic.ttf */; };
+		DECD5CED2645FECB00864C37 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE12645FECB00864C37 /* Roboto-BlackItalic.ttf */; };
+		DECD5CEE2645FECB00864C37 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE22645FECB00864C37 /* Roboto-Medium.ttf */; };
+		DECD5CEF2645FECB00864C37 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE32645FECB00864C37 /* Roboto-Thin.ttf */; };
+		DECD5CF02645FECB00864C37 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE42645FECB00864C37 /* Roboto-BoldItalic.ttf */; };
+		DECD5CF12645FECB00864C37 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE52645FECB00864C37 /* Roboto-Italic.ttf */; };
+		DECD5CF22645FECB00864C37 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE62645FECB00864C37 /* Roboto-Black.ttf */; };
+		DECD5CF32645FECB00864C37 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE72645FECB00864C37 /* Roboto-Bold.ttf */; };
+		DECD5CF42645FECB00864C37 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE82645FECB00864C37 /* Roboto-Light.ttf */; };
+		DECD5CF52645FECB00864C37 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CE92645FECB00864C37 /* Roboto-LightItalic.ttf */; };
+		DECD5CF62645FECB00864C37 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DECD5CEA2645FECB00864C37 /* Roboto-Regular.ttf */; };
+		DECD5CFF2646073100864C37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CFE2646073100864C37 /* SettingsViewController.swift */; };
+		DECD5D0226460BB800864C37 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5D0126460BB800864C37 /* ApiCaller.swift */; };
+		DECD5D052646174E00864C37 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5D042646174E00864C37 /* Advice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E6A04643C64266A7F98727C /* Pods_Advicee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Advicee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0FBF1CDBB4B0B0F61BACCB /* Pods-Advicee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advicee.release.xcconfig"; path = "Target Support Files/Pods-Advicee/Pods-Advicee.release.xcconfig"; sourceTree = "<group>"; };
+		DE4B35EF2646A4920025AE55 /* SwitchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableCell.swift; sourceTree = "<group>"; };
+		DE4B35F02646A4920025AE55 /* SwitchTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTableCell.xib; sourceTree = "<group>"; };
+		DE4B35F42646B41B0025AE55 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		DE4B35F82646CE900025AE55 /* Obeservables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obeservables.swift; sourceTree = "<group>"; };
+		DE4B35FB2646CEA90025AE55 /* ColorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsManager.swift; sourceTree = "<group>"; };
+		DE4B36072646F1930025AE55 /* TableViewCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocols.swift; sourceTree = "<group>"; };
+		DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimeIntervalViewController.swift; sourceTree = "<group>"; };
+		DE8C25AA2648567400CDE929 /* ListTileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTileCell.swift; sourceTree = "<group>"; };
+		DE8C25AB2648567400CDE929 /* ListTileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTileCell.xib; sourceTree = "<group>"; };
 		DECD5CB22645FA4000864C37 /* Advicee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Advicee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DECD5CB52645FA4000864C37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DECD5CB72645FA4000864C37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DECD5CB92645FA4000864C37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DECD5CB92645FA4000864C37 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DECD5CBC2645FA4000864C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DECD5CBE2645FA4100864C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DECD5CC12645FA4100864C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DECD5CC32645FA4100864C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DECD5CDB2645FC7500864C37 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DECD5CDF2645FECB00864C37 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		DECD5CE02645FECB00864C37 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		DECD5CE12645FECB00864C37 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		DECD5CE22645FECB00864C37 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		DECD5CE32645FECB00864C37 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		DECD5CE42645FECB00864C37 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		DECD5CE52645FECB00864C37 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		DECD5CE62645FECB00864C37 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		DECD5CE72645FECB00864C37 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		DECD5CE82645FECB00864C37 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		DECD5CE92645FECB00864C37 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		DECD5CEA2645FECB00864C37 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		DECD5CFE2646073100864C37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DECD5D0126460BB800864C37 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
+		DECD5D042646174E00864C37 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		F93BA11668FDE772DE3832E2 /* Pods-Advicee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advicee.debug.xcconfig"; path = "Target Support Files/Pods-Advicee/Pods-Advicee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +85,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE945FBBCB220F6B1B49D26 /* Pods_Advicee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F8C67589BE5F197A8AE159B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F93BA11668FDE772DE3832E2 /* Pods-Advicee.debug.xcconfig */,
+				CA0FBF1CDBB4B0B0F61BACCB /* Pods-Advicee.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BA8449F6A9E9B5D93B5D151E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E6A04643C64266A7F98727C /* Pods_Advicee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DE4B35E92646A44E0025AE55 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE8C25AA2648567400CDE929 /* ListTileCell.swift */,
+				DE8C25AB2648567400CDE929 /* ListTileCell.xib */,
+				DE4B35EF2646A4920025AE55 /* SwitchTableCell.swift */,
+				DE4B35F02646A4920025AE55 /* SwitchTableCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE4B35F72646CE810025AE55 /* Observables */ = {
+			isa = PBXGroup;
+			children = (
+				DE4B35F82646CE900025AE55 /* Obeservables.swift */,
+			);
+			path = Observables;
+			sourceTree = "<group>";
+		};
+		DE4B360A2646F19E0025AE55 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DE4B36072646F1930025AE55 /* TableViewCellProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		DECD5CA92645FA4000864C37 = {
 			isa = PBXGroup;
 			children = (
 				DECD5CB42645FA4000864C37 /* Advicee */,
 				DECD5CB32645FA4000864C37 /* Products */,
+				7F8C67589BE5F197A8AE159B /* Pods */,
+				BA8449F6A9E9B5D93B5D151E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +157,109 @@
 		DECD5CB42645FA4000864C37 /* Advicee */ = {
 			isa = PBXGroup;
 			children = (
-				DECD5CB52645FA4000864C37 /* AppDelegate.swift */,
-				DECD5CB72645FA4000864C37 /* SceneDelegate.swift */,
-				DECD5CB92645FA4000864C37 /* ViewController.swift */,
-				DECD5CBB2645FA4000864C37 /* Main.storyboard */,
-				DECD5CBE2645FA4100864C37 /* Assets.xcassets */,
-				DECD5CC02645FA4100864C37 /* LaunchScreen.storyboard */,
+				DECD5CD22645FAC400864C37 /* Resources */,
+				DECD5CD12645FABC00864C37 /* Managers */,
+				DECD5CD02645FAB100864C37 /* Utils */,
+				DECD5CCF2645FAA900864C37 /* Controllers */,
+				DECD5CCD2645FA9C00864C37 /* Views */,
+				DECD5CCE2645FAA300864C37 /* ViewModels */,
+				DECD5CCC2645FA8B00864C37 /* Models */,
 				DECD5CC32645FA4100864C37 /* Info.plist */,
 			);
 			path = Advicee;
+			sourceTree = "<group>";
+		};
+		DECD5CCC2645FA8B00864C37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DECD5D042646174E00864C37 /* Advice.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DECD5CCD2645FA9C00864C37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE4B35E92646A44E0025AE55 /* Cells */,
+				DECD5CD32645FAD900864C37 /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DECD5CCE2645FAA300864C37 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DECD5CCF2645FAA900864C37 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DECD5CB92645FA4000864C37 /* HomeViewController.swift */,
+				DECD5CFE2646073100864C37 /* SettingsViewController.swift */,
+				DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DECD5CD02645FAB100864C37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE4B35F72646CE810025AE55 /* Observables */,
+				DECD5CDE2645FEAF00864C37 /* Fonts */,
+				DE4B360A2646F19E0025AE55 /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DECD5CD12645FABC00864C37 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DECD5D0126460BB800864C37 /* ApiCaller.swift */,
+				DE4B35F42646B41B0025AE55 /* NotificationManager.swift */,
+				DE4B35FB2646CEA90025AE55 /* ColorsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		DECD5CD22645FAC400864C37 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DECD5CB52645FA4000864C37 /* AppDelegate.swift */,
+				DECD5CB72645FA4000864C37 /* SceneDelegate.swift */,
+				DECD5CBE2645FA4100864C37 /* Assets.xcassets */,
+				DECD5CDB2645FC7500864C37 /* Extensions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DECD5CD32645FAD900864C37 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DECD5CBB2645FA4000864C37 /* Main.storyboard */,
+				DECD5CC02645FA4100864C37 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DECD5CDE2645FEAF00864C37 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				DECD5CE62645FECB00864C37 /* Roboto-Black.ttf */,
+				DECD5CE12645FECB00864C37 /* Roboto-BlackItalic.ttf */,
+				DECD5CE72645FECB00864C37 /* Roboto-Bold.ttf */,
+				DECD5CE42645FECB00864C37 /* Roboto-BoldItalic.ttf */,
+				DECD5CE52645FECB00864C37 /* Roboto-Italic.ttf */,
+				DECD5CE82645FECB00864C37 /* Roboto-Light.ttf */,
+				DECD5CE92645FECB00864C37 /* Roboto-LightItalic.ttf */,
+				DECD5CE22645FECB00864C37 /* Roboto-Medium.ttf */,
+				DECD5CE02645FECB00864C37 /* Roboto-MediumItalic.ttf */,
+				DECD5CEA2645FECB00864C37 /* Roboto-Regular.ttf */,
+				DECD5CE32645FECB00864C37 /* Roboto-Thin.ttf */,
+				DECD5CDF2645FECB00864C37 /* Roboto-ThinItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DECD5CC62645FA4100864C37 /* Build configuration list for PBXNativeTarget "Advicee" */;
 			buildPhases = (
+				B544D8C637A376E362D43925 /* [CP] Check Pods Manifest.lock */,
 				DECD5CAE2645FA4000864C37 /* Sources */,
 				DECD5CAF2645FA4000864C37 /* Frameworks */,
 				DECD5CB02645FA4000864C37 /* Resources */,
+				B6772F85B6A10751AE3408A4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,22 +321,89 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DECD5CF02645FECB00864C37 /* Roboto-BoldItalic.ttf in Resources */,
+				DECD5CEF2645FECB00864C37 /* Roboto-Thin.ttf in Resources */,
+				DECD5CF52645FECB00864C37 /* Roboto-LightItalic.ttf in Resources */,
+				DECD5CF32645FECB00864C37 /* Roboto-Bold.ttf in Resources */,
+				DECD5CEB2645FECB00864C37 /* Roboto-ThinItalic.ttf in Resources */,
+				DECD5CED2645FECB00864C37 /* Roboto-BlackItalic.ttf in Resources */,
+				DE8C25AD2648567400CDE929 /* ListTileCell.xib in Resources */,
+				DECD5CEC2645FECB00864C37 /* Roboto-MediumItalic.ttf in Resources */,
+				DECD5CF22645FECB00864C37 /* Roboto-Black.ttf in Resources */,
+				DECD5CEE2645FECB00864C37 /* Roboto-Medium.ttf in Resources */,
 				DECD5CC22645FA4100864C37 /* LaunchScreen.storyboard in Resources */,
+				DECD5CF42645FECB00864C37 /* Roboto-Light.ttf in Resources */,
+				DECD5CF12645FECB00864C37 /* Roboto-Italic.ttf in Resources */,
+				DECD5CF62645FECB00864C37 /* Roboto-Regular.ttf in Resources */,
 				DECD5CBF2645FA4100864C37 /* Assets.xcassets in Resources */,
+				DE4B35F22646A4920025AE55 /* SwitchTableCell.xib in Resources */,
 				DECD5CBD2645FA4000864C37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B544D8C637A376E362D43925 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Advicee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6772F85B6A10751AE3408A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Advicee/Pods-Advicee-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Advicee/Pods-Advicee-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Advicee/Pods-Advicee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DECD5CAE2645FA4000864C37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DECD5CBA2645FA4000864C37 /* ViewController.swift in Sources */,
+				DECD5CBA2645FA4000864C37 /* HomeViewController.swift in Sources */,
+				DECD5D0226460BB800864C37 /* ApiCaller.swift in Sources */,
+				DE8C25AC2648567400CDE929 /* ListTileCell.swift in Sources */,
+				DE4B35F12646A4920025AE55 /* SwitchTableCell.swift in Sources */,
+				DE4B36082646F1930025AE55 /* TableViewCellProtocols.swift in Sources */,
+				DE4B35F52646B41B0025AE55 /* NotificationManager.swift in Sources */,
+				DECD5D052646174E00864C37 /* Advice.swift in Sources */,
 				DECD5CB62645FA4000864C37 /* AppDelegate.swift in Sources */,
+				DE4B3618264706FB0025AE55 /* ChangeTimeIntervalViewController.swift in Sources */,
+				DE4B35F92646CE900025AE55 /* Obeservables.swift in Sources */,
 				DECD5CB82645FA4000864C37 /* SceneDelegate.swift in Sources */,
+				DECD5CFF2646073100864C37 /* SettingsViewController.swift in Sources */,
+				DE4B35FC2646CEA90025AE55 /* ColorsManager.swift in Sources */,
+				DECD5CDC2645FC7500864C37 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +535,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,12 +547,14 @@
 		};
 		DECD5CC72645FA4100864C37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93BA11668FDE772DE3832E2 /* Pods-Advicee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SCEW37DC3L;
+				DEVELOPMENT_TEAM = 2S9AS5Y86C;
 				INFOPLIST_FILE = Advicee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,18 +562,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ahmed.Advicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		DECD5CC82645FA4100864C37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0FBF1CDBB4B0B0F61BACCB /* Pods-Advicee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SCEW37DC3L;
+				DEVELOPMENT_TEAM = 2S9AS5Y86C;
 				INFOPLIST_FILE = Advicee/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +583,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ahmed.Advicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

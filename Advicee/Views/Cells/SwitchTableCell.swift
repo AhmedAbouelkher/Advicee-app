@@ -7,17 +7,39 @@
 
 import UIKit
 
-class SwitchTableCell: UITableViewCell {
+protocol SwitchTableCellDelegate: AnyObject {
+    func switchDidToggle(_ cell: SwitchTableCell, newValue value: Bool)
+}
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+struct SwitchTableCellViewModel {
+    let title: String
+    let leadingIcon: UIImage?
+    var isOn: Bool
+}
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+class SwitchTableCell: UITableViewCell, IdentifiableCell {
 
-        // Configure the view for the selected state
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var _switch: UISwitch!
+    
+    public weak var delegate: SwitchTableCellDelegate?
+    
+    fileprivate func configureViews() {
+        backgroundColor = .clear
+        label.textColor = .white
+        iconView.tintColor = .white
     }
     
+    typealias T = SwitchTableCellViewModel
+    public func configure(with model: SwitchTableCellViewModel) {
+        configureViews()
+        label.text = model.title
+        iconView.image = model.leadingIcon
+        _switch.setOn(model.isOn, animated: false)
+    }
+    
+    @IBAction private func didTapSwitch(_ sender: UISwitch) {
+        delegate?.switchDidToggle(self, newValue: sender.isOn)
+    }
 }

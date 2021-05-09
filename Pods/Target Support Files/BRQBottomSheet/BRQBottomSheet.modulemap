@@ -1,0 +1,6 @@
+framework module BRQBottomSheet {
+  umbrella header "BRQBottomSheet-umbrella.h"
+
+  export *
+  module * { export * }
+}
