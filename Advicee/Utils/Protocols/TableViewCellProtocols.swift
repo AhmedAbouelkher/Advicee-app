@@ -34,7 +34,7 @@ extension IdentifiableCell where Self: UITableViewCell {
         }
     }
     
-    static func dequeueFrom(_ tableView: UITableView, forIndexPath indexPath: IndexPath) -> Self {
+    static func dequeue(from tableView: UITableView, forIndexPath indexPath: IndexPath) -> Self {
         let anyCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         guard let cell = anyCell as? Self else {
             fatalError("\(Self.self) is not registed for tableview")

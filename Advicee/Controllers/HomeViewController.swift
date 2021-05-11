@@ -7,15 +7,11 @@
 
 import UIKit
 import FontAwesomeKit
-import Alamofire
-import RandomColorSwift
 
-class HomeNavController: UINavigationController {
-    
+class NavigationController: UINavigationController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
-    
 }
 
 final class HomeViewController: UIViewController {
@@ -24,11 +20,6 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var adviceLabel: UILabel!
     @IBOutlet weak var refreshButton: UIButton!
     
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        .lightContent
-    }
-    
     private let leadingIndicator: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .white)
         spinner.startAnimating()
@@ -36,13 +27,13 @@ final class HomeViewController: UIViewController {
         return spinner
     }()
     
-    private let iconSize: CGFloat = 25.0
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
+    
+    //MARK:- Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +47,13 @@ final class HomeViewController: UIViewController {
         }
         
         
-        let cogIcon = FAKFontAwesome.cogIcon(withSize: iconSize)?.getImage()
+        let cogIcon = FAKFontAwesome.cogIcon(withSize: 25)?.getImage()
         
         settingsButton.setTitle(nil, for: .normal)
         settingsButton.setImage(cogIcon, for: .normal)
         
         
-        let refreshIcon = FAKFontAwesome.refreshIcon(withSize: iconSize)?.getImage()
+        let refreshIcon = FAKFontAwesome.refreshIcon(withSize: 25)?.getImage()
         
         refreshButton.setTitle(nil, for: .normal)
         refreshButton.setImage(refreshIcon, for: .normal)
@@ -71,7 +62,7 @@ final class HomeViewController: UIViewController {
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapRefresh))
         doubleTapGesture.numberOfTapsRequired = 2
         adviceLabel.isUserInteractionEnabled = true
-        view.addGestureRecognizer(doubleTapGesture)
+        adviceLabel.addGestureRecognizer(doubleTapGesture)
         
         NotificationManager.shared.delegate = self
         NotificationManager.shared.requestPermission(in: self)
@@ -88,6 +79,7 @@ final class HomeViewController: UIViewController {
         
     }
     
+    
     @IBAction func didTapSettingsButton(_ sender: UIButton) {
         
         var vc: SettingsViewController!
@@ -103,6 +95,9 @@ final class HomeViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    //MARK:- Fetch Data From API-
+    
     @IBAction func didTapRefresh(_ sender: UIButton) {
         loadNewAdvice()
         DispatchQueue.main.async {
@@ -110,30 +105,27 @@ final class HomeViewController: UIViewController {
         }
     }
     
-    
-    //MARK:- Fetch Data From API
     private func loadNewAdvice() {
         adviceLabel.isHidden = true
         leadingIndicator.isHidden = false
         
-        AF.request("https://api.adviceslip.com/advice")
-            .responseDecodable(
-                of: Advice.self
-            ) { response in
-                switch response.result {
-                case .success(let resp):
-                    DispatchQueue.main.async {
-                        self.adviceLabel.text = resp.slip.advice
-                        self.adviceLabel.isHidden = false
-                        self.leadingIndicator.isHidden = true
-                    }
-                case .failure(let error):
-                    print(error.localizedDescription)
+        ApiCaller.shared.request(Advice.self) { result in
+            switch result {
+            case .success(let resp):
+                DispatchQueue.main.async {
+                    self.adviceLabel.text = resp.slip.advice
+                    self.adviceLabel.isHidden = false
+                    self.leadingIndicator.isHidden = true
                 }
+            case .failure(let error):
+                print(error.localizedDescription)
             }
+        }
     }
     
 }
+
+//MARK:- `NotificationManagerDelegate` impelementation-
 
 extension HomeViewController: NotificationManagerDelegate {
     

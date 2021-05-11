@@ -23,10 +23,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Home Nav Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="VgY-xf-AWs">
             <objects>
-                <navigationController id="ALG-Jz-Mhz" customClass="HomeNavController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="ALG-Jz-Mhz" customClass="NavigationController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FkR-f5-1YP">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -139,7 +139,7 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="aVg-o3-UzZ">
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="FiH-fi-3b6" customClass="SettingsViewController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,7 +165,7 @@
                             <constraint firstItem="VwP-ad-Djk" firstAttribute="top" secondItem="ah1-RR-fHv" secondAttribute="top" constant="10" id="n6H-lV-nqL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="518-lG-nVV"/>
+                    <navigationItem key="navigationItem" title="Settings" id="518-lG-nVV"/>
                     <connections>
                         <outlet property="tableView" destination="VwP-ad-Djk" id="8tT-Qs-EwH"/>
                     </connections>
@@ -201,7 +201,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This the time interval that we will send you a new and great advice at" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-qt-YzZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time interval at which we will send you a new and great advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-qt-YzZ">
                                 <rect key="frame" x="20" y="429.66666666666669" width="374" height="47"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

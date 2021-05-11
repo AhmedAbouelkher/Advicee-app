@@ -8,66 +8,29 @@
 import UIKit
 import FontAwesomeKit
 
-enum SectionOptionType {
-    case standerd
-    case switchable
-    case plain
-    case listTile
-}
-
-struct Section {
-    let title:String
-    var options: [Option]
-}
-
-struct Option {
-    let title: String
-    let titleColor: UIColor?
-    let handler: (() -> Void)?
-    let icon: UIImage?
-    let type: SectionOptionType
-    var subTitle: String?
-    
-    init(title: String,
-         subTitle: String? = nil,
-         icon: UIImage? = nil,
-         type: SectionOptionType = .standerd,
-         titleColor: UIColor? = .white,
-         handler: (() -> Void)? = nil
-    ) {
-        self.title = title
-        self.subTitle = subTitle
-        self.handler = handler
-        self.titleColor = titleColor
-        self.type = type
-        self.icon = icon
-    }
-}
-
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+//    }
+//    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+//    }
+//    
     private var sections = [Section]()
     
     private let notificationTimeString = "Your new advice will be here every"
     
+    //MARK:- Life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        title = "Settings"
         
         self.view.backgroundColor = ColorsManager.shared.currentColor
         self.navigationController?.navigationBar.barTintColor = self.view.backgroundColor
@@ -82,10 +45,10 @@ class SettingsViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
         
-        let cogIcon = FAKFontAwesome.chevronLeftIcon(withSize: 30)?.getImage()
+        let chevronIcon = FAKFontAwesome.chevronLeftIcon(withSize: 30)?.getImage()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: cogIcon,
+            image: chevronIcon,
             style: .plain,
             target: self,
             action: #selector(didTapBack(_:))
@@ -104,6 +67,9 @@ class SettingsViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    
+    //MARK:- Configure table view -
+    
     private func configureTableView() {
         
         var label = "\(notificationTimeString) 30 minutes"
@@ -117,15 +83,20 @@ class SettingsViewController: UIViewController {
             Option(title: "Set Notification Time",
                    subTitle: label,
                    icon: timerIcon, type: .listTile, handler: {
-                self.openNotificationTimeIntervelPicker()
-            }),
+                    self.openNotificationTimeIntervalPicker()
+                   }),
         ])
         
         
         let creditsSection = Section(title: "", options: [
-            Option( title: "Legal" ),
-            Option( title: "Credits"),
-            Option( title: "Contact Us"),
+            Option( title: "Credits", handler: {
+                let vc = CreditsViewController(nibName: "CreditsViewController", bundle: nil)
+                self.present(vc, animated: true)
+            }),
+            Option( title: "Contact Us", handler: {
+                let vc = ContactUsViewController(nibName: "ContactUsViewController", bundle: nil)
+                self.present(vc, animated: true)
+            }),
         ])
         
         [
@@ -134,7 +105,9 @@ class SettingsViewController: UIViewController {
         ].forEach { self.sections.append($0) }
     }
     
-    private func openNotificationTimeIntervelPicker() {        
+    //MARK:- Pick the notification interval-
+    
+    private func openNotificationTimeIntervalPicker() {        
         
         var vc: ChangeTimeIntervalViewController!
         if #available(iOS 13.0, *) {
@@ -191,14 +164,17 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             label.text = option.title
             label.font = UIFont(name: "Roboto-Regular", size: 18.0)
             
-            
-            cell.accessoryType = .disclosureIndicator
             cell.imageView?.tintColor = .white
             cell.imageView?.image = option.icon
             
+            let cheveronIcon = FAKFontAwesome.chevronRightIcon(withSize: 12)?.getImage()
+            
+            cell.accessoryView = UIImageView(image: cheveronIcon)
+            
+            
             return cell
         case .switchable:
-            let cell = SwitchTableCell.dequeueFrom(tableView, forIndexPath: indexPath)
+            let cell = SwitchTableCell.dequeue(from: tableView, forIndexPath: indexPath)
             cell.configure(
                 with: SwitchTableCellViewModel(
                     title: option.title,
@@ -209,7 +185,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             return cell
         case .listTile:
-            let cell = ListTileCell.dequeueFrom(tableView, forIndexPath: indexPath)
+            let cell = ListTileCell.dequeue(from: tableView, forIndexPath: indexPath)
             cell.configure(
                 with: ListTileCellViewModel(
                     title: option.title,
@@ -232,7 +208,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+//MARK:- `SwitchTableCellDelegate` notification toggle callback-
 
+//TODO: impelemet turn on/off notifcations
 extension SettingsViewController: SwitchTableCellDelegate {
     func switchDidToggle(_ cell: SwitchTableCell, newValue value: Bool) {
         print(value)

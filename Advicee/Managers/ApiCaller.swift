@@ -11,18 +11,17 @@ import Alamofire
 class ApiCaller {
     public static let shared = ApiCaller()
     
-//    public func request<T: Codable>(_  ) {
-//        AF.request("https://api.adviceslip.com/advice").responseDecodable(of: T.self) { response in
-//            switch response.result {
-//            case .success(let resp):
-//                DispatchQueue.main.async {
-//                    self.adviceLabel.text = resp.slip.advice
-//                    self.adviceLabel.isHidden = false
-//                    self.leadingIndicator.isHidden = true
-//                }
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
-//    }
+    public func request<T: Codable>(
+        _ type: T.Type,
+        completion: @escaping (Result<T, AFError>) -> Void
+    ) {
+        AF.request(Constants.Api.url).responseDecodable(of: T.self) { response in
+            switch response.result {
+            case .success(let resp):
+                completion(.success(resp))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }

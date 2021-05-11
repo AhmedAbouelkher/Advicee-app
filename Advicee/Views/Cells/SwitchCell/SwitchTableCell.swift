@@ -11,12 +11,6 @@ protocol SwitchTableCellDelegate: AnyObject {
     func switchDidToggle(_ cell: SwitchTableCell, newValue value: Bool)
 }
 
-struct SwitchTableCellViewModel {
-    let title: String
-    let leadingIcon: UIImage?
-    var isOn: Bool
-}
-
 class SwitchTableCell: UITableViewCell, IdentifiableCell {
 
     @IBOutlet weak var label: UILabel!

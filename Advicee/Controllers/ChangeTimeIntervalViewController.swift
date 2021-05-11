@@ -18,11 +18,19 @@ class ChangeTimeIntervalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Edit Interval"
+        title = "Edit Notification Time"
         
-        navigationItem.leftBarButtonItem = .init(barButtonSystemItem: .cancel, target: self, action: #selector(didTapCancel))
+        navigationItem.leftBarButtonItem = .init(
+            barButtonSystemItem: .cancel,
+            target: self,
+            action: #selector(didTapCancel)
+        )
         
-        navigationItem.rightBarButtonItem = .init(barButtonSystemItem: .save, target: self, action: #selector(didTapSave))
+        navigationItem.rightBarButtonItem = .init(
+            barButtonSystemItem: .save, 
+            target: self,
+            action: #selector(didTapSave)
+        )
         
         view.backgroundColor = ColorsManager.shared.currentColor
         
@@ -65,28 +73,4 @@ class ChangeTimeIntervalViewController: UIViewController {
         timeLabel.text = sender.date.getString()
         self.timeIntervalDate = sender.date
     }
-}
-
-extension Date {
-    public func dateComponants() -> DateComponents {
-        return Calendar.current.dateComponents([.hour, .minute], from: self)
-    }
-    
-    public func getTimeInterval() -> TimeInterval? {
-        let dateC = self.dateComponants()
-        guard let minute = dateC.minute, let hour = dateC.hour else { return nil }
-        return TimeInterval( 60 * (minute + hour * 60))
-    }
-    
-    public func getString() -> String {
-        let dateComps = self.dateComponants()
-        var label = "\(dateComps.minute!) minutes"
-        
-        if let hour =  dateComps.hour, hour != 0 {
-            label = "\(hour) hour\(hour > 1 ? "s" : "") & " + label
-        }
-        
-        return label
-    }
-    
 }

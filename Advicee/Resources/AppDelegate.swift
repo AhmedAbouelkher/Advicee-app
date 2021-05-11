@@ -15,9 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ColorsManager.shared.updateColor()
+        
+        /// Setup `setMinimumBackgroundFetchInterval`
+        
         let backgroundFetchDefaultDate = NotificationManager.shared.backgroundFetchDefaultDate
         let backgroundFetchDefaultTimeInterval = backgroundFetchDefaultDate?.getTimeInterval() ?? 1800.0
-        
         UIApplication.shared.setMinimumBackgroundFetchInterval(backgroundFetchDefaultTimeInterval)
         
         return true
@@ -29,16 +31,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        AF.request("https://api.adviceslip.com/advice").responseDecodable(of: Advice.self) { response in
-            switch response.result {
+        
+        ApiCaller.shared.request(Advice.self) { result in
+            switch result {
             case .success(let resp):
                 NotificationManager.shared.fireNotifications(with: resp, show: "Advice of the day")
-                print(resp.slip.advice)
+                completionHandler(.newData)
             case .failure(let error):
                 print(error.localizedDescription)
+                completionHandler(.failed)
             }
         }
-        completionHandler(.newData)
+        
     }
     
     
@@ -96,14 +100,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
-
-
-//if #available(iOS 13.0, *) {
-//    // MARK: Registering Launch Handlers for Tasks
-//    BGTaskScheduler.shared.register(forTaskWithIdentifier: "com.example.apple-samplecode.ColorFeed.refresh", using: nil) { task in
-//        // Downcast the parameter to an app refresh task as this identifier is used for a refresh request.
-//        self.handleAppRefresh(task: task as! BGAppRefreshTask)
-//    }
-//}
-
-

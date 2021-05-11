@@ -8,6 +8,10 @@
 import UIKit
 
 protocol NotificationManagerDelegate: AnyObject {
+    /// The method is triggerd when the manager sends a new advice and start processing its notification message.
+    /// - Parameters:
+    ///   - manager: The current used notiication manager.
+    ///   - userData: The data which the manager decided to send  to the current delegate owner.
     func didRecive(_ manager: NotificationManager, userData: [String:Any?]?)
 }
 
@@ -16,26 +20,22 @@ final class NotificationManager: NSObject {
     
     private var userNotifications: UNUserNotificationCenter!
     
-    public weak var delegate: NotificationManagerDelegate?
-    
     private override init() {
         super.init()
         userNotifications = UNUserNotificationCenter.current()
         userNotifications.delegate = self
     }
     
-//    public var backgroundFetchDefaultTimeInterval: TimeInterval {
-//        UserDefaults.backgroundFetchDefaultTimeInterval()
-//    }
-//
-//    public func setBackgroundFetchDefaultTimeInterval(with interval: TimeInterval) {
-//        UserDefaults.saveBackgroundFetchDefaultTimeInterval(with: interval)
-//    }
+    /// `NotificationManagerDelegate` which can be used to enteract with the current notification manager.
+    public weak var delegate: NotificationManagerDelegate?
     
+    /// The default date "aka: `TimeInterval`" at which the background advice fetch will fire.
     public var backgroundFetchDefaultDate: Date? {
         UserDefaults.backgroundFetchDefaultDate()
     }
     
+    /// Asign the default time "aka: `TimeInterval`" at which the background advice fetch will fire.
+    /// - Parameter date: The given date from `UIDatePicker`.
     public func setBackgroundFetchDefaultDate(with date: Date) {
         UserDefaults.saveBackgroundFetchDefaultDate(with: date)
     }
@@ -43,11 +43,15 @@ final class NotificationManager: NSObject {
     
     //MARK:- Fire Notification Methods
     
+    /// Fires a notifiacation with a new advice.
+    /// - Parameters:
+    ///   - advice: The fetched advice object.
+    ///   - title: Notification message title.
     public func fireNotifications(with advice: Advice, show title: String? = nil) {
         let notificationContent = UNMutableNotificationContent()
         notificationContent.title = title ?? ""
         notificationContent.body = advice.slip.advice
-        notificationContent.sound = .default
+        notificationContent.sound = UNNotificationSound(named: UNNotificationSoundName("notification_sound.wav"))
         
         notificationContent.badge = UserDefaults.getCurrentBadgesNumber()
         
@@ -68,13 +72,17 @@ final class NotificationManager: NSObject {
         }
     }
     
+    /// Clears the app notification icon badges
     public func clearBadges() {
         UIApplication.shared.applicationIconBadgeNumber = 0
         UserDefaults.clearBadgesFromStorage()
     }
     
     
-    //MARK:- Permission
+    //MARK:- Permission-
+    
+    /// Request notification permission
+    /// - Parameter vc: The current working `UIViewController` to display the alert dialog.
     public func requestPermission(in vc: UIViewController) {
         assert(self.userNotifications != nil)
         let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
@@ -90,10 +98,20 @@ final class NotificationManager: NSObject {
         }
     }
     
-    
     //MARK:- Alerts -
     
-    private func showNotificationsPermissionAlert(in vc: UIViewController, with title: String? = nil, content: String, completion: @escaping () -> Void) {
+    /// Show the Notification permission error alert to ask the user to go to `Settings` and allow push local notification.
+    /// - Parameters:
+    ///   - vc: The current working `UIViewController` to display the alert dialog.
+    ///   - title: Alert dialog title.
+    ///   - content: Alert dialog conent.
+    ///   - completion: The completion block which will be called when the user chooses to go to `Settings`
+    private func showNotificationsPermissionAlert(
+        in vc: UIViewController,
+        with title: String? = nil,
+        content: String,
+        completion: @escaping () -> Void
+    ) {
         let vc = UIAlertController(title: title, message: content, preferredStyle: .alert)
         
         
@@ -112,14 +130,6 @@ final class NotificationManager: NSObject {
     }
 }
 
-/*
- 
- @available(iOS, introduced: 4.0, deprecated: 10.0, message: "Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]")
- optional func application(_ application: UIApplication, didReceive notification: UILocalNotification)
- 
- */
-
-
 extension NotificationManager: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         self.clearBadges()
@@ -131,6 +141,10 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
 private extension UserDefaults {
     
     //MARK:- Permission Alert Dialog-
+    
+    /// Show the user an alert dialog to allow him to go to `setting` and allow notification in case of refusing to give the app the permission at first.
+    ///
+    /// Can be used as: `Set` & `Get`
     var showPermissionAlert: Bool {
         set {
             UserDefaults.standard.setValue(newValue, forKey: "showPermissionAlert")
@@ -142,6 +156,9 @@ private extension UserDefaults {
     }
     
     //MARK:- Notifications Badges-
+    
+    /// Retunes the correct `Next badge number` which will be displayed on the app icon.
+    /// - Returns: Next app notification badge number
     static func getCurrentBadgesNumber() -> NSNumber {
         var currentNotifications: Int {
             guard let num = UserDefaults.standard.value(forKey: "getCurrentBadgesNumber") as? Int else {
@@ -158,17 +175,8 @@ private extension UserDefaults {
         UserDefaults.standard.setValue(nil, forKey: "getCurrentBadgesNumber")
     }
     
-//    static func saveBackgroundFetchDefaultTimeInterval(with timeInterval: TimeInterval) {
-//        UserDefaults.standard.setValue(timeInterval, forKey: "backgroundFetchDefaultTimeInterval")
-//    }
+    //MARK:- Background fetching date storage-
     
-//    static func backgroundFetchDefaultTimeInterval() -> TimeInterval {
-//        guard let timeInterval = UserDefaults.standard.value(forKey:"backgroundFetchDefaultTimeInterval") as? TimeInterval else {
-//            return 1800
-//        }
-//        return timeInterval
-//    }
-//
     static func saveBackgroundFetchDefaultDate(with date: Date) {
         UserDefaults.standard.setValue(date, forKey: "backgroundFetchDefaultTimeInterval")
     }

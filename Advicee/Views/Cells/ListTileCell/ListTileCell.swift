@@ -7,13 +7,6 @@
 
 import UIKit
 
-
-struct ListTileCellViewModel {
-    let title: String
-    let subTitle: String?
-    let leadingIcon: UIImage?
-}
-
 class ListTileCell: UITableViewCell, IdentifiableCell {
 
     @IBOutlet weak var label: UILabel!

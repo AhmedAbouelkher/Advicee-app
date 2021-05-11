@@ -41,35 +41,3 @@ final class ColorsManager {
         )
     }
 }
-
-
-//
-//final class ColorsManager {
-//    public static let shared = ColorsManager()
-//
-//    private var colorObservable: Observable<Color>!
-//
-//    private init() {
-//        print("private init")
-//        colorObservable = Observable(
-//            randomColor(
-//                hue: .random,
-//                luminosity: .dark
-//            )
-//        )
-//    }
-//
-//    public func bind(_ compeletion: @escaping ((Color) -> Void ) ) {
-//        colorObservable.bind { _ in
-//            let color = self.colorObservable.value!
-//            compeletion(color)
-//        }
-//    }
-//
-//    public func updateColor() {
-//        colorObservable.value = randomColor(
-//            hue: .random,
-//            luminosity: .dark
-//        )
-//    }
-//}

@@ -17,6 +17,13 @@
 		DE4B3618264706FB0025AE55 /* ChangeTimeIntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */; };
 		DE8C25AC2648567400CDE929 /* ListTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8C25AA2648567400CDE929 /* ListTileCell.swift */; };
 		DE8C25AD2648567400CDE929 /* ListTileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8C25AB2648567400CDE929 /* ListTileCell.xib */; };
+		DE9924A52649E6190034A353 /* SocialContactTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9924A42649E6190034A353 /* SocialContactTableCell.swift */; };
+		DE9924AC2649E6540034A353 /* SocialContactCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9924AB2649E6540034A353 /* SocialContactCellViewModel.swift */; };
+		DE9924C72649E89D0034A353 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9924C52649E89D0034A353 /* CreditsViewController.swift */; };
+		DE9924C82649E89D0034A353 /* CreditsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9924C62649E89D0034A353 /* CreditsViewController.xib */; };
+		DE9924D12649EB4D0034A353 /* CreditsTileTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9924CF2649EB4D0034A353 /* CreditsTileTableCell.swift */; };
+		DE9924D22649EB4D0034A353 /* CreditsTileTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE9924D02649EB4D0034A353 /* CreditsTileTableCell.xib */; };
+		DE9924D62649EDF10034A353 /* UIUnderLinelabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9924D52649EDF10034A353 /* UIUnderLinelabel.swift */; };
 		DECD5CB62645FA4000864C37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CB52645FA4000864C37 /* AppDelegate.swift */; };
 		DECD5CB82645FA4000864C37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CB72645FA4000864C37 /* SceneDelegate.swift */; };
 		DECD5CBA2645FA4000864C37 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CB92645FA4000864C37 /* HomeViewController.swift */; };
@@ -39,6 +46,14 @@
 		DECD5CFF2646073100864C37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CFE2646073100864C37 /* SettingsViewController.swift */; };
 		DECD5D0226460BB800864C37 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5D0126460BB800864C37 /* ApiCaller.swift */; };
 		DECD5D052646174E00864C37 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5D042646174E00864C37 /* Advice.swift */; };
+		DEFBAED52648B29C0037655B /* notification_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = DEFBAED42648B29C0037655B /* notification_sound.wav */; };
+		DEFBAED82648B5460037655B /* SettingTableViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAED72648B5460037655B /* SettingTableViewModels.swift */; };
+		DEFBAEDC2648C4A80037655B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAEDB2648C4A80037655B /* Constants.swift */; };
+		DEFBAEDF2648C6690037655B /* ListTileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAEDE2648C6690037655B /* ListTileCellViewModel.swift */; };
+		DEFBAEE22648C67F0037655B /* SwitchTableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAEE12648C67F0037655B /* SwitchTableCellViewModel.swift */; };
+		DEFBAEE62648CEB70037655B /* SettingsLegal.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEFBAEE52648CEB70037655B /* SettingsLegal.storyboard */; };
+		DEFBAEEF2648CF450037655B /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAEED2648CF450037655B /* ContactUsViewController.swift */; };
+		DEFBAEF02648CF450037655B /* ContactUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFBAEEE2648CF450037655B /* ContactUsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +68,13 @@
 		DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimeIntervalViewController.swift; sourceTree = "<group>"; };
 		DE8C25AA2648567400CDE929 /* ListTileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTileCell.swift; sourceTree = "<group>"; };
 		DE8C25AB2648567400CDE929 /* ListTileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTileCell.xib; sourceTree = "<group>"; };
+		DE9924A42649E6190034A353 /* SocialContactTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialContactTableCell.swift; sourceTree = "<group>"; };
+		DE9924AB2649E6540034A353 /* SocialContactCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialContactCellViewModel.swift; sourceTree = "<group>"; };
+		DE9924C52649E89D0034A353 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
+		DE9924C62649E89D0034A353 /* CreditsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditsViewController.xib; sourceTree = "<group>"; };
+		DE9924CF2649EB4D0034A353 /* CreditsTileTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsTileTableCell.swift; sourceTree = "<group>"; };
+		DE9924D02649EB4D0034A353 /* CreditsTileTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreditsTileTableCell.xib; sourceTree = "<group>"; };
+		DE9924D52649EDF10034A353 /* UIUnderLinelabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUnderLinelabel.swift; sourceTree = "<group>"; };
 		DECD5CB22645FA4000864C37 /* Advicee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Advicee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DECD5CB52645FA4000864C37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DECD5CB72645FA4000864C37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +99,14 @@
 		DECD5CFE2646073100864C37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DECD5D0126460BB800864C37 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		DECD5D042646174E00864C37 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
+		DEFBAED42648B29C0037655B /* notification_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notification_sound.wav; sourceTree = "<group>"; };
+		DEFBAED72648B5460037655B /* SettingTableViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewModels.swift; sourceTree = "<group>"; };
+		DEFBAEDB2648C4A80037655B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DEFBAEDE2648C6690037655B /* ListTileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTileCellViewModel.swift; sourceTree = "<group>"; };
+		DEFBAEE12648C67F0037655B /* SwitchTableCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableCellViewModel.swift; sourceTree = "<group>"; };
+		DEFBAEE52648CEB70037655B /* SettingsLegal.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsLegal.storyboard; sourceTree = "<group>"; };
+		DEFBAEED2648CF450037655B /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		DEFBAEEE2648CF450037655B /* ContactUsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactUsViewController.xib; sourceTree = "<group>"; };
 		F93BA11668FDE772DE3832E2 /* Pods-Advicee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Advicee.debug.xcconfig"; path = "Target Support Files/Pods-Advicee/Pods-Advicee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,10 +142,10 @@
 		DE4B35E92646A44E0025AE55 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				DE8C25AA2648567400CDE929 /* ListTileCell.swift */,
-				DE8C25AB2648567400CDE929 /* ListTileCell.xib */,
-				DE4B35EF2646A4920025AE55 /* SwitchTableCell.swift */,
-				DE4B35F02646A4920025AE55 /* SwitchTableCell.xib */,
+				DE9924CA2649EB130034A353 /* CreditsCell */,
+				DE9924AA2649E6340034A353 /* ListTileCell */,
+				DE9924A82649E6290034A353 /* SwitchCell */,
+				DE9924A42649E6190034A353 /* SocialContactTableCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -134,6 +164,42 @@
 				DE4B36072646F1930025AE55 /* TableViewCellProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DE9924A82649E6290034A353 /* SwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE4B35EF2646A4920025AE55 /* SwitchTableCell.swift */,
+				DE4B35F02646A4920025AE55 /* SwitchTableCell.xib */,
+			);
+			path = SwitchCell;
+			sourceTree = "<group>";
+		};
+		DE9924AA2649E6340034A353 /* ListTileCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE8C25AA2648567400CDE929 /* ListTileCell.swift */,
+				DE8C25AB2648567400CDE929 /* ListTileCell.xib */,
+			);
+			path = ListTileCell;
+			sourceTree = "<group>";
+		};
+		DE9924C42649E8850034A353 /* Credits */ = {
+			isa = PBXGroup;
+			children = (
+				DE9924C52649E89D0034A353 /* CreditsViewController.swift */,
+				DE9924C62649E89D0034A353 /* CreditsViewController.xib */,
+			);
+			path = Credits;
+			sourceTree = "<group>";
+		};
+		DE9924CA2649EB130034A353 /* CreditsCell */ = {
+			isa = PBXGroup;
+			children = (
+				DE9924CF2649EB4D0034A353 /* CreditsTileTableCell.swift */,
+				DE9924D02649EB4D0034A353 /* CreditsTileTableCell.xib */,
+			);
+			path = CreditsCell;
 			sourceTree = "<group>";
 		};
 		DECD5CA92645FA4000864C37 = {
@@ -182,6 +248,7 @@
 			children = (
 				DE4B35E92646A44E0025AE55 /* Cells */,
 				DECD5CD32645FAD900864C37 /* Storyboards */,
+				DE9924D52649EDF10034A353 /* UIUnderLinelabel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +256,10 @@
 		DECD5CCE2645FAA300864C37 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DEFBAED72648B5460037655B /* SettingTableViewModels.swift */,
+				DEFBAEDE2648C6690037655B /* ListTileCellViewModel.swift */,
+				DEFBAEE12648C67F0037655B /* SwitchTableCellViewModel.swift */,
+				DE9924AB2649E6540034A353 /* SocialContactCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -199,6 +270,7 @@
 				DECD5CB92645FA4000864C37 /* HomeViewController.swift */,
 				DECD5CFE2646073100864C37 /* SettingsViewController.swift */,
 				DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */,
+				DEFBAEE82648CEE10037655B /* SettingsLegal */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,7 +301,9 @@
 				DECD5CB52645FA4000864C37 /* AppDelegate.swift */,
 				DECD5CB72645FA4000864C37 /* SceneDelegate.swift */,
 				DECD5CBE2645FA4100864C37 /* Assets.xcassets */,
+				DEFBAED42648B29C0037655B /* notification_sound.wav */,
 				DECD5CDB2645FC7500864C37 /* Extensions.swift */,
+				DEFBAEDB2648C4A80037655B /* Constants.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -239,6 +313,7 @@
 			children = (
 				DECD5CBB2645FA4000864C37 /* Main.storyboard */,
 				DECD5CC02645FA4100864C37 /* LaunchScreen.storyboard */,
+				DEFBAEE52648CEB70037655B /* SettingsLegal.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -260,6 +335,24 @@
 				DECD5CDF2645FECB00864C37 /* Roboto-ThinItalic.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		DEFBAEE82648CEE10037655B /* SettingsLegal */ = {
+			isa = PBXGroup;
+			children = (
+				DE9924C42649E8850034A353 /* Credits */,
+				DEFBAEF42648CF580037655B /* ContactUs */,
+			);
+			path = SettingsLegal;
+			sourceTree = "<group>";
+		};
+		DEFBAEF42648CF580037655B /* ContactUs */ = {
+			isa = PBXGroup;
+			children = (
+				DEFBAEED2648CF450037655B /* ContactUsViewController.swift */,
+				DEFBAEEE2648CF450037655B /* ContactUsViewController.xib */,
+			);
+			path = ContactUs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,16 +417,21 @@
 				DECD5CF02645FECB00864C37 /* Roboto-BoldItalic.ttf in Resources */,
 				DECD5CEF2645FECB00864C37 /* Roboto-Thin.ttf in Resources */,
 				DECD5CF52645FECB00864C37 /* Roboto-LightItalic.ttf in Resources */,
+				DEFBAEF02648CF450037655B /* ContactUsViewController.xib in Resources */,
 				DECD5CF32645FECB00864C37 /* Roboto-Bold.ttf in Resources */,
+				DE9924D22649EB4D0034A353 /* CreditsTileTableCell.xib in Resources */,
 				DECD5CEB2645FECB00864C37 /* Roboto-ThinItalic.ttf in Resources */,
 				DECD5CED2645FECB00864C37 /* Roboto-BlackItalic.ttf in Resources */,
 				DE8C25AD2648567400CDE929 /* ListTileCell.xib in Resources */,
 				DECD5CEC2645FECB00864C37 /* Roboto-MediumItalic.ttf in Resources */,
 				DECD5CF22645FECB00864C37 /* Roboto-Black.ttf in Resources */,
+				DE9924C82649E89D0034A353 /* CreditsViewController.xib in Resources */,
+				DEFBAED52648B29C0037655B /* notification_sound.wav in Resources */,
 				DECD5CEE2645FECB00864C37 /* Roboto-Medium.ttf in Resources */,
 				DECD5CC22645FA4100864C37 /* LaunchScreen.storyboard in Resources */,
 				DECD5CF42645FECB00864C37 /* Roboto-Light.ttf in Resources */,
 				DECD5CF12645FECB00864C37 /* Roboto-Italic.ttf in Resources */,
+				DEFBAEE62648CEB70037655B /* SettingsLegal.storyboard in Resources */,
 				DECD5CF62645FECB00864C37 /* Roboto-Regular.ttf in Resources */,
 				DECD5CBF2645FA4100864C37 /* Assets.xcassets in Resources */,
 				DE4B35F22646A4920025AE55 /* SwitchTableCell.xib in Resources */,
@@ -392,16 +490,26 @@
 			files = (
 				DECD5CBA2645FA4000864C37 /* HomeViewController.swift in Sources */,
 				DECD5D0226460BB800864C37 /* ApiCaller.swift in Sources */,
+				DE9924AC2649E6540034A353 /* SocialContactCellViewModel.swift in Sources */,
+				DE9924C72649E89D0034A353 /* CreditsViewController.swift in Sources */,
+				DE9924A52649E6190034A353 /* SocialContactTableCell.swift in Sources */,
 				DE8C25AC2648567400CDE929 /* ListTileCell.swift in Sources */,
 				DE4B35F12646A4920025AE55 /* SwitchTableCell.swift in Sources */,
 				DE4B36082646F1930025AE55 /* TableViewCellProtocols.swift in Sources */,
 				DE4B35F52646B41B0025AE55 /* NotificationManager.swift in Sources */,
+				DEFBAED82648B5460037655B /* SettingTableViewModels.swift in Sources */,
+				DEFBAEEF2648CF450037655B /* ContactUsViewController.swift in Sources */,
+				DEFBAEDC2648C4A80037655B /* Constants.swift in Sources */,
 				DECD5D052646174E00864C37 /* Advice.swift in Sources */,
 				DECD5CB62645FA4000864C37 /* AppDelegate.swift in Sources */,
+				DEFBAEDF2648C6690037655B /* ListTileCellViewModel.swift in Sources */,
 				DE4B3618264706FB0025AE55 /* ChangeTimeIntervalViewController.swift in Sources */,
+				DE9924D12649EB4D0034A353 /* CreditsTileTableCell.swift in Sources */,
 				DE4B35F92646CE900025AE55 /* Obeservables.swift in Sources */,
+				DEFBAEE22648C67F0037655B /* SwitchTableCellViewModel.swift in Sources */,
 				DECD5CB82645FA4000864C37 /* SceneDelegate.swift in Sources */,
 				DECD5CFF2646073100864C37 /* SettingsViewController.swift in Sources */,
+				DE9924D62649EDF10034A353 /* UIUnderLinelabel.swift in Sources */,
 				DE4B35FC2646CEA90025AE55 /* ColorsManager.swift in Sources */,
 				DECD5CDC2645FC7500864C37 /* Extensions.swift in Sources */,
 			);
