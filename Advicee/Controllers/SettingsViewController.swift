@@ -11,18 +11,7 @@ import FontAwesomeKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
-//    }
-//    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: animated)
-//    }
-//    
+
     private var sections = [Section]()
     
     private let notificationTimeString = "Your new advice will be here every"
@@ -38,9 +27,6 @@ class SettingsViewController: UIViewController {
         
         navigationController?.navigationBar.tintColor = .white
         
-        if #available(iOS 11.0, *) {
-            navigationController?.navigationBar.prefersLargeTitles = true
-        }
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         
@@ -64,7 +50,7 @@ class SettingsViewController: UIViewController {
     
     @objc
     private func didTapBack(_ sender: UIButton) {    
-        navigationController?.popViewController(animated: true)
+        navigationController?.dismiss(animated: true)
     }
     
     
@@ -92,10 +78,12 @@ class SettingsViewController: UIViewController {
             Option( title: "Credits", handler: {
                 let vc = CreditsViewController(nibName: "CreditsViewController", bundle: nil)
                 self.present(vc, animated: true)
+//                self.navigationController?.pushViewController(vc, animated: true)
             }),
             Option( title: "Contact Us", handler: {
                 let vc = ContactUsViewController(nibName: "ContactUsViewController", bundle: nil)
                 self.present(vc, animated: true)
+//                self.navigationController?.pushViewController(vc, animated: true)
             }),
         ])
         
@@ -208,11 +196,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//MARK:- `SwitchTableCellDelegate` notification toggle callback-
+//MARK:- `SwitchTableCellDelegate` notification toggle callback -
 
 //TODO: impelemet turn on/off notifcations
 extension SettingsViewController: SwitchTableCellDelegate {
     func switchDidToggle(_ cell: SwitchTableCell, newValue value: Bool) {
-        print(value)
+        NotificationManager.shared.disableOrEnableNotificationServices()
     }
 }

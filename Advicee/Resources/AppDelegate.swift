@@ -16,9 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ColorsManager.shared.updateColor()
         
-        /// Setup `setMinimumBackgroundFetchInterval`
+        let notificationManager = NotificationManager.shared
         
-        let backgroundFetchDefaultDate = NotificationManager.shared.backgroundFetchDefaultDate
+        if notificationManager.isNotificationServicesEnabled() {
+            UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalNever)
+            return true
+        }
+        /// Setup `setMinimumBackgroundFetchInterval`
+        let backgroundFetchDefaultDate = notificationManager.backgroundFetchDefaultDate
         let backgroundFetchDefaultTimeInterval = backgroundFetchDefaultDate?.getTimeInterval() ?? 1800.0
         UIApplication.shared.setMinimumBackgroundFetchInterval(backgroundFetchDefaultTimeInterval)
         
@@ -29,13 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NotificationManager.shared.clearBadges()
     }
     
-    
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         ApiCaller.shared.request(Advice.self) { result in
             switch result {
             case .success(let resp):
-                NotificationManager.shared.fireNotifications(with: resp, show: "Advice of the day")
+                NotificationManager.shared.fireNotifications(with: resp)
                 completionHandler(.newData)
             case .failure(let error):
                 print(error.localizedDescription)

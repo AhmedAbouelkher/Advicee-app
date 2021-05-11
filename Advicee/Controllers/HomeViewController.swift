@@ -20,6 +20,10 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var adviceLabel: UILabel!
     @IBOutlet weak var refreshButton: UIButton!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        .lightContent
+    }
+    
     private let leadingIndicator: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView(style: .white)
         spinner.startAnimating()
@@ -90,9 +94,13 @@ final class HomeViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             vc = (storyboard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController)
         }
-        
-        
-        navigationController?.pushViewController(vc, animated: true)
+        let navVC = NavigationController(rootViewController: vc)
+        if #available(iOS 11.0, *) {
+            navVC.navigationItem.largeTitleDisplayMode = .always
+        }
+        navVC.modalPresentationStyle = .fullScreen
+        navVC.title = "Settings"
+        present(navVC, animated: true)
     }
     
     
@@ -129,10 +137,10 @@ final class HomeViewController: UIViewController {
 
 extension HomeViewController: NotificationManagerDelegate {
     
-    func didRecive(_ manager: NotificationManager, userData: [String : Any?]?) {
-        guard let advice = userData?["advice"] as? Advice else {  return }
+    func didRecive(_ manager: NotificationManager, userData: [String : Any]) {
+        guard let advice = userData["advice"] as? String else { return }
         DispatchQueue.main.async {
-            self.adviceLabel.text = advice.slip.advice
+            self.adviceLabel.text = advice
             self.adviceLabel.isHidden = false
             self.leadingIndicator.isHidden = true
             ColorsManager.shared.updateColor()

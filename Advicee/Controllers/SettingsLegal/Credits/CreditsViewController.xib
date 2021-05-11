@@ -39,7 +39,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UaJ-hd-ncj">
-                    <rect key="frame" x="20" y="148.5" width="374" height="713.5"/>
+                    <rect key="frame" x="20" y="178.5" width="374" height="683.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="YNj-Og-KEl"/>
@@ -54,7 +54,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UaJ-hd-ncj" secondAttribute="trailing" constant="20" id="9kf-Nu-dMy"/>
                 <constraint firstItem="GCS-J3-r9E" firstAttribute="leading" secondItem="jn6-r1-wHY" secondAttribute="trailing" constant="-374" id="Bpa-tb-ags"/>
                 <constraint firstItem="UaJ-hd-ncj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="DaC-Ut-t9w"/>
-                <constraint firstItem="UaJ-hd-ncj" firstAttribute="top" secondItem="GCS-J3-r9E" secondAttribute="bottom" constant="10" id="DuM-sV-WyL"/>
+                <constraint firstItem="UaJ-hd-ncj" firstAttribute="top" secondItem="GCS-J3-r9E" secondAttribute="bottom" constant="40" id="DuM-sV-WyL"/>
                 <constraint firstItem="GCS-J3-r9E" firstAttribute="centerX" secondItem="jn6-r1-wHY" secondAttribute="centerX" id="Klx-aN-vbK"/>
                 <constraint firstItem="jn6-r1-wHY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="MKu-Vt-AHK"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="UaJ-hd-ncj" secondAttribute="bottom" id="N5Z-u1-JLF"/>

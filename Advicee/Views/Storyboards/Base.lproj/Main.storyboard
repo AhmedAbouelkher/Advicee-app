@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ALG-Jz-Mhz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -23,28 +23,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="VgY-xf-AWs">
-            <objects>
-                <navigationController id="ALG-Jz-Mhz" customClass="NavigationController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="FkR-f5-1YP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3mx-qM-vLl">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eHm-Sa-9pB"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CgF-pY-Qns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-788" y="94"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -54,16 +32,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0tY-fe-22a">
-                                <rect key="frame" x="137.33333333333331" y="223" width="139.33333333333331" height="52"/>
+                                <rect key="frame" x="136.66666666666666" y="126.99999999999999" width="140.99999999999997" height="51.333333333333329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you are" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx5-6P-DcF">
-                                        <rect key="frame" x="9.3333333333333215" y="0.0" width="120.66666666666669" height="26"/>
+                                        <rect key="frame" x="7.6666666666666785" y="0.0" width="125.33333333333331" height="25.666666666666668"/>
                                         <fontDescription key="fontDescription" name="Roboto-Italic" family="Roboto" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a great Advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhW-Ls-O23">
-                                        <rect key="frame" x="0.0" y="26" width="139.33333333333334" height="26"/>
+                                        <rect key="frame" x="0.0" y="25.666666666666657" width="141" height="25.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -71,13 +49,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Advice Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu1-xo-H2F">
-                                <rect key="frame" x="10" y="481" width="394" height="40"/>
+                                <rect key="frame" x="10" y="433.33333333333331" width="394" height="39.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgn-I3-3Ts">
-                                <rect key="frame" x="354" y="150" width="50" height="50"/>
+                                <rect key="frame" x="354" y="54" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EyV-Gh-7ej"/>
                                     <constraint firstAttribute="width" constant="50" id="ySe-5b-D8t"/>
@@ -95,7 +73,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHj-gt-EkS">
-                                <rect key="frame" x="10" y="150" width="50" height="50"/>
+                                <rect key="frame" x="10" y="54" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6MY-WL-gTB"/>
                                     <constraint firstAttribute="width" constant="50" id="Ylz-th-kPT"/>
@@ -132,7 +110,6 @@
                         <outlet property="adviceLabel" destination="cu1-xo-H2F" id="mR2-SX-E09"/>
                         <outlet property="refreshButton" destination="xHj-gt-EkS" id="DgO-Sy-5fb"/>
                         <outlet property="settingsButton" destination="wgn-I3-3Ts" id="Kvo-wr-qmM"/>
-                        <segue destination="FiH-fi-3b6" kind="show" id="BmE-NR-MZE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -148,7 +125,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VwP-ad-Djk">
-                                <rect key="frame" x="0.0" y="150" width="414" height="746"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="FiH-fi-3b6" id="zMp-Md-IZW"/>
@@ -201,24 +178,40 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time interval at which we will send you a new and great advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-qt-YzZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time interval at which we will send you a new advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-qt-YzZ">
                                 <rect key="frame" x="20" y="429.66666666666669" width="374" height="47"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nY-9d-m0A">
+                                <rect key="frame" x="20" y="526.66666666666663" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Rpc-ff-lb4"/>
+                                </constraints>
+                                <state key="normal" title="Auto select time interval">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapAuto:" destination="MF9-rE-Ois" eventType="touchUpInside" id="4YI-7s-nMR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jgb-tA-LYQ"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="cXb-qt-YzZ" secondAttribute="trailing" constant="20" id="0WM-Ok-PBR"/>
                             <constraint firstItem="PF0-9J-Qd0" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="9vQ-8b-21x"/>
+                            <constraint firstItem="1nY-9d-m0A" firstAttribute="centerX" secondItem="cXb-qt-YzZ" secondAttribute="centerX" id="DIx-TW-6Er"/>
+                            <constraint firstItem="1nY-9d-m0A" firstAttribute="top" secondItem="cXb-qt-YzZ" secondAttribute="bottom" constant="50" id="ITP-iB-Hd4"/>
                             <constraint firstItem="PF0-9J-Qd0" firstAttribute="centerX" secondItem="jgb-tA-LYQ" secondAttribute="centerX" id="Qc0-06-vyZ"/>
+                            <constraint firstItem="1nY-9d-m0A" firstAttribute="trailing" secondItem="cXb-qt-YzZ" secondAttribute="trailing" id="T8t-as-X6I"/>
                             <constraint firstItem="cXb-qt-YzZ" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="UYz-G2-MsV"/>
                             <constraint firstItem="oRC-PG-45R" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="X8O-To-1MP"/>
                             <constraint firstItem="PF0-9J-Qd0" firstAttribute="top" secondItem="jgb-tA-LYQ" secondAttribute="top" constant="71" id="YLh-H7-MCp"/>
                             <constraint firstItem="cXb-qt-YzZ" firstAttribute="centerX" secondItem="jgb-tA-LYQ" secondAttribute="centerX" id="f13-5e-6yf"/>
                             <constraint firstItem="CiZ-RT-iAc" firstAttribute="top" secondItem="PF0-9J-Qd0" secondAttribute="bottom" constant="8" id="i92-v8-ZWX"/>
+                            <constraint firstItem="1nY-9d-m0A" firstAttribute="leading" secondItem="cXb-qt-YzZ" secondAttribute="leading" id="iTy-Cc-arQ"/>
                             <constraint firstItem="cXb-qt-YzZ" firstAttribute="centerY" secondItem="jgb-tA-LYQ" secondAttribute="centerY" id="mLh-Hd-c7J"/>
                             <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="CiZ-RT-iAc" secondAttribute="trailing" constant="20" id="oG2-Ne-QmD"/>
                             <constraint firstItem="CiZ-RT-iAc" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="vBN-Tq-mEt"/>
@@ -227,6 +220,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="autoButton" destination="1nY-9d-m0A" id="74o-Pj-K84"/>
                         <outlet property="timeLabel" destination="CiZ-RT-iAc" id="uzv-Yv-uVf"/>
                         <outlet property="timePicker" destination="oRC-PG-45R" id="NYl-Uc-GKk"/>
                     </connections>

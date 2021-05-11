@@ -15,6 +15,11 @@
 		DE4B35FC2646CEA90025AE55 /* ColorsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B35FB2646CEA90025AE55 /* ColorsManager.swift */; };
 		DE4B36082646F1930025AE55 /* TableViewCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B36072646F1930025AE55 /* TableViewCellProtocols.swift */; };
 		DE4B3618264706FB0025AE55 /* ChangeTimeIntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */; };
+		DE4B623A264ADD3C009EDD65 /* juntos-607.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE4B6235264ADD3C009EDD65 /* juntos-607.mp3 */; };
+		DE4B623B264ADD3C009EDD65 /* closure-542.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE4B6236264ADD3C009EDD65 /* closure-542.mp3 */; };
+		DE4B623C264ADD3C009EDD65 /* swiftly-610.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE4B6237264ADD3C009EDD65 /* swiftly-610.mp3 */; };
+		DE4B623D264ADD3C009EDD65 /* piece-of-cake-611.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE4B6238264ADD3C009EDD65 /* piece-of-cake-611.mp3 */; };
+		DE4B623E264ADD3C009EDD65 /* eventually-590.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DE4B6239264ADD3C009EDD65 /* eventually-590.mp3 */; };
 		DE8C25AC2648567400CDE929 /* ListTileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8C25AA2648567400CDE929 /* ListTileCell.swift */; };
 		DE8C25AD2648567400CDE929 /* ListTileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE8C25AB2648567400CDE929 /* ListTileCell.xib */; };
 		DE9924A52649E6190034A353 /* SocialContactTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE9924A42649E6190034A353 /* SocialContactTableCell.swift */; };
@@ -46,7 +51,6 @@
 		DECD5CFF2646073100864C37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5CFE2646073100864C37 /* SettingsViewController.swift */; };
 		DECD5D0226460BB800864C37 /* ApiCaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5D0126460BB800864C37 /* ApiCaller.swift */; };
 		DECD5D052646174E00864C37 /* Advice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECD5D042646174E00864C37 /* Advice.swift */; };
-		DEFBAED52648B29C0037655B /* notification_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = DEFBAED42648B29C0037655B /* notification_sound.wav */; };
 		DEFBAED82648B5460037655B /* SettingTableViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAED72648B5460037655B /* SettingTableViewModels.swift */; };
 		DEFBAEDC2648C4A80037655B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAEDB2648C4A80037655B /* Constants.swift */; };
 		DEFBAEDF2648C6690037655B /* ListTileCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFBAEDE2648C6690037655B /* ListTileCellViewModel.swift */; };
@@ -66,6 +70,11 @@
 		DE4B35FB2646CEA90025AE55 /* ColorsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsManager.swift; sourceTree = "<group>"; };
 		DE4B36072646F1930025AE55 /* TableViewCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocols.swift; sourceTree = "<group>"; };
 		DE4B3617264706FB0025AE55 /* ChangeTimeIntervalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTimeIntervalViewController.swift; sourceTree = "<group>"; };
+		DE4B6235264ADD3C009EDD65 /* juntos-607.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "juntos-607.mp3"; sourceTree = "<group>"; };
+		DE4B6236264ADD3C009EDD65 /* closure-542.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "closure-542.mp3"; sourceTree = "<group>"; };
+		DE4B6237264ADD3C009EDD65 /* swiftly-610.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "swiftly-610.mp3"; sourceTree = "<group>"; };
+		DE4B6238264ADD3C009EDD65 /* piece-of-cake-611.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "piece-of-cake-611.mp3"; sourceTree = "<group>"; };
+		DE4B6239264ADD3C009EDD65 /* eventually-590.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "eventually-590.mp3"; sourceTree = "<group>"; };
 		DE8C25AA2648567400CDE929 /* ListTileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTileCell.swift; sourceTree = "<group>"; };
 		DE8C25AB2648567400CDE929 /* ListTileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTileCell.xib; sourceTree = "<group>"; };
 		DE9924A42649E6190034A353 /* SocialContactTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialContactTableCell.swift; sourceTree = "<group>"; };
@@ -99,7 +108,6 @@
 		DECD5CFE2646073100864C37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DECD5D0126460BB800864C37 /* ApiCaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCaller.swift; sourceTree = "<group>"; };
 		DECD5D042646174E00864C37 /* Advice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advice.swift; sourceTree = "<group>"; };
-		DEFBAED42648B29C0037655B /* notification_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notification_sound.wav; sourceTree = "<group>"; };
 		DEFBAED72648B5460037655B /* SettingTableViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewModels.swift; sourceTree = "<group>"; };
 		DEFBAEDB2648C4A80037655B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEFBAEDE2648C6690037655B /* ListTileCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTileCellViewModel.swift; sourceTree = "<group>"; };
@@ -164,6 +172,18 @@
 				DE4B36072646F1930025AE55 /* TableViewCellProtocols.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DE4B622B264AD921009EDD65 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DE4B6236264ADD3C009EDD65 /* closure-542.mp3 */,
+				DE4B6239264ADD3C009EDD65 /* eventually-590.mp3 */,
+				DE4B6235264ADD3C009EDD65 /* juntos-607.mp3 */,
+				DE4B6238264ADD3C009EDD65 /* piece-of-cake-611.mp3 */,
+				DE4B6237264ADD3C009EDD65 /* swiftly-610.mp3 */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		DE9924A82649E6290034A353 /* SwitchCell */ = {
@@ -278,6 +298,7 @@
 		DECD5CD02645FAB100864C37 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DE4B622B264AD921009EDD65 /* Sounds */,
 				DE4B35F72646CE810025AE55 /* Observables */,
 				DECD5CDE2645FEAF00864C37 /* Fonts */,
 				DE4B360A2646F19E0025AE55 /* Protocols */,
@@ -301,7 +322,6 @@
 				DECD5CB52645FA4000864C37 /* AppDelegate.swift */,
 				DECD5CB72645FA4000864C37 /* SceneDelegate.swift */,
 				DECD5CBE2645FA4100864C37 /* Assets.xcassets */,
-				DEFBAED42648B29C0037655B /* notification_sound.wav */,
 				DECD5CDB2645FC7500864C37 /* Extensions.swift */,
 				DEFBAEDB2648C4A80037655B /* Constants.swift */,
 			);
@@ -414,11 +434,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE4B623E264ADD3C009EDD65 /* eventually-590.mp3 in Resources */,
 				DECD5CF02645FECB00864C37 /* Roboto-BoldItalic.ttf in Resources */,
 				DECD5CEF2645FECB00864C37 /* Roboto-Thin.ttf in Resources */,
 				DECD5CF52645FECB00864C37 /* Roboto-LightItalic.ttf in Resources */,
 				DEFBAEF02648CF450037655B /* ContactUsViewController.xib in Resources */,
 				DECD5CF32645FECB00864C37 /* Roboto-Bold.ttf in Resources */,
+				DE4B623C264ADD3C009EDD65 /* swiftly-610.mp3 in Resources */,
 				DE9924D22649EB4D0034A353 /* CreditsTileTableCell.xib in Resources */,
 				DECD5CEB2645FECB00864C37 /* Roboto-ThinItalic.ttf in Resources */,
 				DECD5CED2645FECB00864C37 /* Roboto-BlackItalic.ttf in Resources */,
@@ -426,10 +448,12 @@
 				DECD5CEC2645FECB00864C37 /* Roboto-MediumItalic.ttf in Resources */,
 				DECD5CF22645FECB00864C37 /* Roboto-Black.ttf in Resources */,
 				DE9924C82649E89D0034A353 /* CreditsViewController.xib in Resources */,
-				DEFBAED52648B29C0037655B /* notification_sound.wav in Resources */,
 				DECD5CEE2645FECB00864C37 /* Roboto-Medium.ttf in Resources */,
+				DE4B623B264ADD3C009EDD65 /* closure-542.mp3 in Resources */,
 				DECD5CC22645FA4100864C37 /* LaunchScreen.storyboard in Resources */,
 				DECD5CF42645FECB00864C37 /* Roboto-Light.ttf in Resources */,
+				DE4B623D264ADD3C009EDD65 /* piece-of-cake-611.mp3 in Resources */,
+				DE4B623A264ADD3C009EDD65 /* juntos-607.mp3 in Resources */,
 				DECD5CF12645FECB00864C37 /* Roboto-Italic.ttf in Resources */,
 				DEFBAEE62648CEB70037655B /* SettingsLegal.storyboard in Resources */,
 				DECD5CF62645FECB00864C37 /* Roboto-Regular.ttf in Resources */,
@@ -659,6 +683,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S9AS5Y86C;
 				INFOPLIST_FILE = Advicee/Info.plist;
@@ -667,8 +692,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ahmed.Advicee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.advicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -680,6 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2S9AS5Y86C;
 				INFOPLIST_FILE = Advicee/Info.plist;
@@ -688,8 +715,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ahmed.Advicee;
+				PRODUCT_BUNDLE_IDENTIFIER = com.advicee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

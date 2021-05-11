@@ -35,21 +35,24 @@ class CreditsViewController: UIViewController {
     
     
     private func configureTabelView() {
-        //Google fonts: fonts.google.com
-        //Notification sound
-        
         let size: CGFloat = 24
         let creditsContacts = [
             
             CreditsTileTableCellViewModel(
-                label: "'mixkit.co' gave us an amazing notifiacation sound",
-                subLabel: "Sci-Fi reject notification",
-                icon: FAKFontAwesome.globeIcon(withSize: size)?.getImage(with: nil, color: .black),
-                url: URL(string: "https://mixkit.co/free-sound-effects/notification/")
+                label: "Advice Slip JSON API",
+                subLabel: "This API made the whole app worth it ♥️",
+                icon: FAKFontAwesome.sitemapIcon(withSize: size)?.getImage(with: nil, color: .black),
+                url: URL(string: "https://api.adviceslip.com/")
             ),
             CreditsTileTableCellViewModel(
-                label: "'fonts.google.com' for my favorite font 'Roboto'",
-                subLabel: "Roboto fonts",
+                label: "notificationsounds.com",
+                subLabel: "Gave us amazing notifiacation sounds closure-542, eventually-590, etc..",
+                icon: FAKFontAwesome.globeIcon(withSize: size)?.getImage(with: nil, color: .black),
+                url: URL(string: "https://notificationsounds.com/")
+            ),
+            CreditsTileTableCellViewModel(
+                label: "fonts.google.com",
+                subLabel: "For my favorite font ever Roboto",
                 icon: FAKFontAwesome.googleIcon(withSize: size)?.getImage(
                     with: nil,
                     color: UIColor(hex: "#4285F4")

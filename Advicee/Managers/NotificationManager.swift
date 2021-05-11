@@ -12,10 +12,11 @@ protocol NotificationManagerDelegate: AnyObject {
     /// - Parameters:
     ///   - manager: The current used notiication manager.
     ///   - userData: The data which the manager decided to send  to the current delegate owner.
-    func didRecive(_ manager: NotificationManager, userData: [String:Any?]?)
+    func didRecive(_ manager: NotificationManager, userData: [String : Any])
 }
 
 final class NotificationManager: NSObject {
+    /// Get `NotificationManager` instance to use.
     public static let shared = NotificationManager()
     
     private var userNotifications: UNUserNotificationCenter!
@@ -40,6 +41,30 @@ final class NotificationManager: NSObject {
         UserDefaults.saveBackgroundFetchDefaultDate(with: date)
     }
     
+    public func isNotificationServicesEnabled() -> Bool {
+        return UserDefaults.standard.isNotificationServicesEnabled()
+    }
+    
+    //MARK:- Notification -
+    
+    private struct Notification {
+        let title: String
+        let sound: UNNotificationSoundName?
+    }
+    
+    private let notificaitonTitles: [Notification] = [
+        Notification(title: "Advice of the day 🥰", sound: .init("swiftly-610.mp3")),
+        Notification(title: "Your new advice is served 😃", sound: .init("closure-542.mp3")),
+        Notification(title: "Here your are a bit of a new advice 🎉", sound: .init("eventually-590.mp3")),
+        Notification(title: "Here me out 😜", sound: .init("juntos-607.mp3")),
+        Notification(title: "Did you know? 🤔", sound: .init("piece-of-cake-611.mp3")),
+    ]
+    
+    /// Returns a random advice notification message title & tone.
+    /// - Returns: `Notification` object.
+    private func getNotificationMessageTitle() -> Notification {
+        return notificaitonTitles.randomElement()!
+    }
     
     //MARK:- Fire Notification Methods
     
@@ -47,11 +72,18 @@ final class NotificationManager: NSObject {
     /// - Parameters:
     ///   - advice: The fetched advice object.
     ///   - title: Notification message title.
-    public func fireNotifications(with advice: Advice, show title: String? = nil) {
+    public func fireNotifications(with advice: Advice) {
+        guard self.isNotificationServicesEnabled() else {
+            print("Notification services are offline")
+            return
+        }
         let notificationContent = UNMutableNotificationContent()
-        notificationContent.title = title ?? ""
+        let randomNotificationData = self.getNotificationMessageTitle()
+        notificationContent.title = randomNotificationData.title
         notificationContent.body = advice.slip.advice
-        notificationContent.sound = UNNotificationSound(named: UNNotificationSoundName("notification_sound.wav"))
+        if let tone = randomNotificationData.sound {
+            notificationContent.sound = UNNotificationSound(named: tone)
+        }
         
         notificationContent.badge = UserDefaults.getCurrentBadgesNumber()
         
@@ -66,20 +98,43 @@ final class NotificationManager: NSObject {
             if error != nil {
                 print(error!.localizedDescription)
             } else {
-                self.delegate?.didRecive(self, userData: ["advice": advice])
-                
+                self.delegate?.didRecive(self, userData: ["advice": advice.slip.advice])
             }
         }
     }
     
-    /// Clears the app notification icon badges
+    /// Clears the app notification icon badges.
     public func clearBadges() {
         UIApplication.shared.applicationIconBadgeNumber = 0
         UserDefaults.clearBadgesFromStorage()
     }
     
+    /// Enables notification services.
+    private func enableNotificationServices() {
+        guard let vc = UIApplication.shared.keyWindow?.rootViewController else {
+            fatalError("couldn't find available view controller to show alerts on")
+        }
+        UserDefaults.standard.changeNotificationAvailability(with: true)
+        requestPermission(in: vc)
+    }
     
-    //MARK:- Permission-
+    /// Disables notification services.
+    private func disableNotificationServices() {
+        UserDefaults.standard.changeNotificationAvailability(with: false)
+    }
+    
+    
+    /// Toggle between enabling and disabling local push notification service.
+    public func disableOrEnableNotificationServices() {
+        if UserDefaults.standard.isNotificationServicesEnabled() {
+            disableNotificationServices()
+        } else {
+            enableNotificationServices()
+        }
+    }
+    
+    
+    //MARK:- Permission -
     
     /// Request notification permission
     /// - Parameter vc: The current working `UIViewController` to display the alert dialog.
@@ -132,13 +187,15 @@ final class NotificationManager: NSObject {
 
 extension NotificationManager: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let advice = response.notification.request.content.body
+        self.delegate?.didRecive(self, userData: ["advice": advice])
         self.clearBadges()
         completionHandler()
     }
 }
 
 
-private extension UserDefaults {
+fileprivate extension UserDefaults {
     
     //MARK:- Permission Alert Dialog-
     
@@ -154,6 +211,23 @@ private extension UserDefaults {
             return show ?? true
         }
     }
+    
+    //MARK:- Enabling/Disabling Notification services -
+    
+    /// Changes the storered value with which the app will choose to push local notification or not.
+    /// - Parameter available: Whether or not to make the push notification service live.
+    func changeNotificationAvailability(with available: Bool) {
+        let oldValue = (self.value(forKey: "enableNotificationService") as? Bool) ?? true
+        if available == oldValue { fatalError("New NotificationAvailability value is the same as the old one") }
+        self.setValue(available, forKey: "enableNotificationService")
+    }
+    
+    /// Returnes the stores value with which the app will choose to push local notification or not.
+    /// - Returns: The stored value of push notification service availablility.
+    func isNotificationServicesEnabled() -> Bool {
+        return (self.value(forKey: "enableNotificationService") as? Bool) ?? true
+    }
+    
     
     //MARK:- Notifications Badges-
     
@@ -175,7 +249,7 @@ private extension UserDefaults {
         UserDefaults.standard.setValue(nil, forKey: "getCurrentBadgesNumber")
     }
     
-    //MARK:- Background fetching date storage-
+    //MARK:- Background fetching date storage -
     
     static func saveBackgroundFetchDefaultDate(with date: Date) {
         UserDefaults.standard.setValue(date, forKey: "backgroundFetchDefaultTimeInterval")
