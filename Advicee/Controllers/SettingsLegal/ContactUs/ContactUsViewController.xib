@@ -37,8 +37,8 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lebel" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tga-VX-bFZ">
-                    <rect key="frame" x="20" y="285.5" width="374" height="22.5"/>
-                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="19"/>
+                    <rect key="frame" x="20" y="285.5" width="374" height="19"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -49,7 +49,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RjO-N9-eYM">
-                    <rect key="frame" x="20" y="328" width="374" height="482"/>
+                    <rect key="frame" x="20" y="324.5" width="374" height="485.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="nep-eh-5UK"/>
@@ -57,7 +57,7 @@
                     </connections>
                 </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="tmy-2Y-Hng">
-                    <rect key="frame" x="130" y="825" width="154" height="32"/>
+                    <rect key="frame" x="101.5" y="825" width="211" height="32"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dM4-N5-ksW">
                             <rect key="frame" x="0.0" y="1" width="30" height="30"/>
@@ -67,9 +67,9 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-gY-bsi">
-                            <rect key="frame" x="35" y="0.0" width="119" height="32"/>
+                            <rect key="frame" x="35" y="0.0" width="176" height="32"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                            <state key="normal" title="Show on Github"/>
+                            <state key="normal" title="Show project on Github"/>
                             <connections>
                                 <action selector="didTapShowInGithub:" destination="-1" eventType="touchUpInside" id="Vca-TM-fyf"/>
                             </connections>

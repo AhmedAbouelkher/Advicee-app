@@ -25,6 +25,7 @@ class CreditsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         contentLabel.text = "Thanks from our heart to all the people who created the tools that helped every developer to be better to be able to deliver the highest quality code."
         
@@ -36,8 +37,14 @@ class CreditsViewController: UIViewController {
     
     private func configureTabelView() {
         let size: CGFloat = 24
+
         let creditsContacts = [
-            
+            CreditsTileTableCellViewModel(
+                label: "public-apis",
+                subLabel: "A collective list of free APIs",
+                icon: FAKFontAwesome.githubIcon(withSize: size)?.getImage(with: nil, color: .black),
+                url: URL(string: "https://github.com/public-apis/public-apis")
+            ),
             CreditsTileTableCellViewModel(
                 label: "Advice Slip JSON API",
                 subLabel: "This API made the whole app worth it ♥️",

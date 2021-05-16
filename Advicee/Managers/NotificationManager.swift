@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol NotificationManagerDelegate: AnyObject {
+protocol NotificationManagerDelegate: AnyObject {    
     /// The method is triggerd when the manager sends a new advice and start processing its notification message.
     /// - Parameters:
     ///   - manager: The current used notiication manager.
@@ -110,27 +110,16 @@ final class NotificationManager: NSObject {
     }
     
     /// Enables notification services.
-    private func enableNotificationServices() {
-        guard let vc = UIApplication.shared.keyWindow?.rootViewController else {
-            fatalError("couldn't find available view controller to show alerts on")
-        }
+    ///
+    /// Must call in `main thread`
+    public func enableNotificationServices(in rootVC: UIViewController) {
         UserDefaults.standard.changeNotificationAvailability(with: true)
-        requestPermission(in: vc)
+        requestPermission(in: rootVC)
     }
     
     /// Disables notification services.
-    private func disableNotificationServices() {
+    public func disableNotificationServices() {
         UserDefaults.standard.changeNotificationAvailability(with: false)
-    }
-    
-    
-    /// Toggle between enabling and disabling local push notification service.
-    public func disableOrEnableNotificationServices() {
-        if UserDefaults.standard.isNotificationServicesEnabled() {
-            disableNotificationServices()
-        } else {
-            enableNotificationServices()
-        }
     }
     
     
@@ -140,17 +129,33 @@ final class NotificationManager: NSObject {
     /// - Parameter vc: The current working `UIViewController` to display the alert dialog.
     public func requestPermission(in vc: UIViewController) {
         assert(self.userNotifications != nil)
+        
         let authOptions = UNAuthorizationOptions(arrayLiteral: .alert, .badge, .sound)
-        userNotifications.requestAuthorization(options: authOptions) { (success, error) in
-            guard success, error == nil else {
-                if UserDefaults.standard.showPermissionAlert {
-                    self.showNotificationsPermissionAlert(in: vc, with: "Notifiactions", content: error!.localizedDescription) {
-                        UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!, options:[:], completionHandler: nil)
+        
+        userNotifications.getNotificationSettings { settings in
+            DispatchQueue.main.async {
+                if settings.authorizationStatus == .authorized {
+                    print("User has authorized notification permission")
+                } else if  settings.authorizationStatus == .denied {
+                    UserDefaults.standard.changeNotificationAvailability(with: false)
+                    self.showAlert(in: vc)
+                } else {
+                    self.userNotifications.requestAuthorization(options: authOptions) { (enabled, error) in
+                        guard error == nil else {
+                            print(error!.localizedDescription)
+                            return
+                        }
+                        if !enabled {
+                            DispatchQueue.main.async {
+                                self.showAlert(in: vc)
+                            }
+                        }
+                        UserDefaults.standard.changeNotificationAvailability(with: enabled)
                     }
                 }
-                return
             }
         }
+        
     }
     
     //MARK:- Alerts -
@@ -162,27 +167,44 @@ final class NotificationManager: NSObject {
     ///   - content: Alert dialog conent.
     ///   - completion: The completion block which will be called when the user chooses to go to `Settings`
     private func showNotificationsPermissionAlert(
-        in vc: UIViewController,
+        in rootVC: UIViewController,
         with title: String? = nil,
         content: String,
         completion: @escaping () -> Void
     ) {
-        let vc = UIAlertController(title: title, message: content, preferredStyle: .alert)
+        
+        let alertDialogVC = UIAlertController(title: title, message: content, preferredStyle: .alert)
         
         
-        vc.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler: { _ in
+        alertDialogVC.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler: { _ in
             completion()
         }))
         
-        vc.addAction(UIAlertAction(title: "Don't ask again", style: .default, handler: { _ in
+        alertDialogVC.addAction(UIAlertAction(title: "Don't ask again", style: .destructive, handler: { _ in
             UserDefaults.standard.showPermissionAlert = false
         }))
         
-        vc.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+        alertDialogVC.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
+        rootVC.present(alertDialogVC, animated: true)
         
-        vc.present(vc, animated: true)
     }
+    
+    /// Showas `showNotificationsPermissionAlert` if the user denied notifications.
+    /// - Parameter vc: The current view controlelr.
+    private func showAlert(in vc: UIViewController) {
+        if !UserDefaults.standard.showPermissionAlert { return }
+        showNotificationsPermissionAlert(
+            in: vc,
+            with: "Enable Notifiactions 😢",
+            content: "To help us deliver awesome content and to use all the app potentials, we highly recommend enabling Notification 🥰."
+        ) {
+            UIApplication.shared.open(
+                URL(string: UIApplication.openSettingsURLString)!, options:[:], completionHandler: nil
+            )
+        }
+    }
+    
 }
 
 extension NotificationManager: UNUserNotificationCenterDelegate {
@@ -197,7 +219,7 @@ extension NotificationManager: UNUserNotificationCenterDelegate {
 
 fileprivate extension UserDefaults {
     
-    //MARK:- Permission Alert Dialog-
+    //MARK:- Permission Alert Dialog -
     
     /// Show the user an alert dialog to allow him to go to `setting` and allow notification in case of refusing to give the app the permission at first.
     ///
@@ -217,15 +239,20 @@ fileprivate extension UserDefaults {
     /// Changes the storered value with which the app will choose to push local notification or not.
     /// - Parameter available: Whether or not to make the push notification service live.
     func changeNotificationAvailability(with available: Bool) {
-        let oldValue = (self.value(forKey: "enableNotificationService") as? Bool) ?? true
-        if available == oldValue { fatalError("New NotificationAvailability value is the same as the old one") }
+        //        let oldValue = self.value(forKey: "enableNotificationService") as? Bool
+        //        if available == oldValue {
+        //            fatalError("New `NotificationAvailability` value is the same as the old one")
+        //        }
         self.setValue(available, forKey: "enableNotificationService")
     }
     
     /// Returnes the stores value with which the app will choose to push local notification or not.
     /// - Returns: The stored value of push notification service availablility.
     func isNotificationServicesEnabled() -> Bool {
-        return (self.value(forKey: "enableNotificationService") as? Bool) ?? true
+        guard let enabled = self.value(forKey: "enableNotificationService") as? Bool else {
+            return true
+        }
+        return enabled
     }
     
     

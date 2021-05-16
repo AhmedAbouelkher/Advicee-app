@@ -45,6 +45,8 @@ class SettingsViewController: UIViewController {
         tableView.separatorStyle = .none
         
         configureTableView()
+        
+        print(NotificationManager.shared.isNotificationServicesEnabled())
     }
     
     
@@ -70,7 +72,8 @@ class SettingsViewController: UIViewController {
                    subTitle: label,
                    icon: timerIcon, type: .listTile, handler: {
                     self.openNotificationTimeIntervalPicker()
-                   }),
+                   }
+            ),
         ])
         
         
@@ -104,15 +107,16 @@ class SettingsViewController: UIViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             vc = (storyboard.instantiateViewController(withIdentifier: "ChangeTimeIntervalViewController") as! ChangeTimeIntervalViewController)
         }
+        let indexPath = IndexPath(row: 1, section: 0)
         vc.completion = { [weak self] date in
             guard let self = self,
                   let date = date,
-                  let option = self.sections[0].options.last else { return }
+                  let option = self.sections[indexPath.section].options.last else { return }
             
             var _option = option
             _option.subTitle = "\(self.notificationTimeString) \(date.getString())"
-            self.sections[0].options.removeLast()
-            self.sections[0].options.append(_option)
+            self.sections[indexPath.section].options.removeLast()
+            self.sections[indexPath.section].options.append(_option)
             self.tableView.reloadData()
         }
         let navVC = UINavigationController(rootViewController: vc)
@@ -140,6 +144,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         
         
         let option = sections[indexPath.section].options[indexPath.row]
+        let isNotificationEnabled = NotificationManager.shared.isNotificationServicesEnabled()
         
         switch option.type {
         case .standerd:
@@ -163,13 +168,15 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .switchable:
             let cell = SwitchTableCell.dequeue(from: tableView, forIndexPath: indexPath)
+            
             cell.configure(
                 with: SwitchTableCellViewModel(
                     title: option.title,
                     leadingIcon: FAKFontAwesome.bellIcon(withSize: 30)?.getImage(),
-                    isOn: true
+                    isOn: isNotificationEnabled
                 )
             )
+            cell.selectionStyle = .none
             cell.delegate = self
             return cell
         case .listTile:
@@ -178,9 +185,11 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 with: ListTileCellViewModel(
                     title: option.title,
                     subTitle: option.subTitle,
-                    leadingIcon: FAKFontAwesome.clockOIcon(withSize: 30)?.getImage()
+                    leadingIcon: FAKFontAwesome.clockOIcon(withSize: 30),
+                    isEnabled: isNotificationEnabled
                 )
             )
+            cell.selectionStyle = .none
             return cell
         case .plain:
             break
@@ -198,9 +207,16 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
 
 //MARK:- `SwitchTableCellDelegate` notification toggle callback -
 
-//TODO: impelemet turn on/off notifcations
 extension SettingsViewController: SwitchTableCellDelegate {
     func switchDidToggle(_ cell: SwitchTableCell, newValue value: Bool) {
-        NotificationManager.shared.disableOrEnableNotificationServices()
+        if value {
+            NotificationManager.shared.enableNotificationServices(in: self)
+        } else {
+            NotificationManager.shared.disableNotificationServices()
+        }
+        let indexPath = IndexPath(row: 1, section: 0)
+        let cell = tableView.cellForRow(at: indexPath) as! ListTileCell
+        cell.setEnabled(enabled: value)
+        
     }
 }

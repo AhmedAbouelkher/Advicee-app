@@ -79,8 +79,7 @@ class ContactUsViewController: UIViewController {
     
     
     @IBAction private func didTapShowInGithub(_ sender: UIButton) {
-        guard let url = URL(string: "https://github.com/AhmedAbouelkher/Advicee-app") else { return }
-        UIApplication.shared.open(url, options:[:], completionHandler: nil)
+        showUrlLaunchingConfirmationSheet(with:  URL(string: "https://github.com/AhmedAbouelkher/Advicee-app"), title: nil)
     }
 }
 

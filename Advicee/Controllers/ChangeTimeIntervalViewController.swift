@@ -83,6 +83,7 @@ class ChangeTimeIntervalViewController: UIViewController {
         if let date = self.timeIntervalDate {
             NotificationManager.shared.setBackgroundFetchDefaultDate(with: date)
         }
+        UserDefaults.setTimeIntervalSelectMode(with: self.pickerState)
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
             self.completion?(self.timeIntervalDate)
@@ -102,17 +103,20 @@ class ChangeTimeIntervalViewController: UIViewController {
             pickerState = .custom
             timePicker.isEnabled = true
             autoButton.setTitle("Auto select time interval", for: .normal)
+            timeLabel.text = timePicker.date.getString()
         } else {
             pickerState = .auto
             timePicker.isEnabled = false
             autoButton.setTitle("Custom time interval select", for: .normal)
+            timeLabel.text = "Auto"
         }
     }
     
     @IBAction
     private func didTapAuto(_ sender: UIButton) {
-        performTimeIntervalPicking()
-        UserDefaults.setTimeIntervalSelectMode(with: self.pickerState)
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.performTimeIntervalPicking()
+        }
         
         if self.pickerState == .auto {
             self.timeIntervalDate = Date()

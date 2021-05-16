@@ -45,7 +45,7 @@ final class HomeViewController: UIViewController {
         view.addSubview(leadingIndicator)
         
         ColorsManager.shared.bind { color in
-            UIView.animate(withDuration: 0.4) {
+            UIView.animate(withDuration: 0.55) {
                 self.view.backgroundColor = color
             }
         }
@@ -69,6 +69,7 @@ final class HomeViewController: UIViewController {
         adviceLabel.addGestureRecognizer(doubleTapGesture)
         
         NotificationManager.shared.delegate = self
+        
         NotificationManager.shared.requestPermission(in: self)
         
         loadNewAdvice()

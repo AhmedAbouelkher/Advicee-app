@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import FontAwesomeKit
 
 struct ListTileCellViewModel {
     let title: String
     let subTitle: String?
-    let leadingIcon: UIImage?
+    let leadingIcon: FAKIcon?
+    let isEnabled: Bool
 }

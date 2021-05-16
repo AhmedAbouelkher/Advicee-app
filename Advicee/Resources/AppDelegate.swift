@@ -7,7 +7,6 @@
 
 import UIKit
 import BackgroundTasks
-import Alamofire
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,17 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ColorsManager.shared.updateColor()
         
-        let notificationManager = NotificationManager.shared
         
-        if notificationManager.isNotificationServicesEnabled() {
+        let notificationManager = NotificationManager.shared
+
+        if !notificationManager.isNotificationServicesEnabled() {
             UIApplication.shared.setMinimumBackgroundFetchInterval(UIApplication.backgroundFetchIntervalNever)
+            print("Notifications is disabled".uppercased())
             return true
         }
         /// Setup `setMinimumBackgroundFetchInterval`
         let backgroundFetchDefaultDate = notificationManager.backgroundFetchDefaultDate
-        let backgroundFetchDefaultTimeInterval = backgroundFetchDefaultDate?.getTimeInterval() ?? 1800.0
+        let backgroundFetchDefaultTimeInterval = backgroundFetchDefaultDate?.getTimeInterval() ?? UIApplication.backgroundFetchIntervalMinimum
         UIApplication.shared.setMinimumBackgroundFetchInterval(backgroundFetchDefaultTimeInterval)
-        
         return true
     }
     
@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        
         ApiCaller.shared.request(Advice.self) { result in
             switch result {
             case .success(let resp):

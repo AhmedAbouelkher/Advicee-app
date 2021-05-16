@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -28,20 +28,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="0tY-fe-22a">
-                                <rect key="frame" x="136.66666666666666" y="126.99999999999999" width="140.99999999999997" height="51.333333333333329"/>
+                                <rect key="frame" x="118" y="83" width="139.5" height="52"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here you are" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx5-6P-DcF">
-                                        <rect key="frame" x="7.6666666666666785" y="0.0" width="125.33333333333331" height="25.666666666666668"/>
+                                        <rect key="frame" x="9.5" y="0.0" width="120.5" height="26"/>
                                         <fontDescription key="fontDescription" name="Roboto-Italic" family="Roboto" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a great Advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhW-Ls-O23">
-                                        <rect key="frame" x="0.0" y="25.666666666666657" width="141" height="25.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="26" width="139.5" height="26"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -49,13 +49,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Advice Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cu1-xo-H2F">
-                                <rect key="frame" x="10" y="433.33333333333331" width="394" height="39.666666666666686"/>
+                                <rect key="frame" x="10" y="313.5" width="355" height="40"/>
                                 <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="34"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgn-I3-3Ts">
-                                <rect key="frame" x="354" y="54" width="50" height="50"/>
+                                <rect key="frame" x="315" y="10" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EyV-Gh-7ej"/>
                                     <constraint firstAttribute="width" constant="50" id="ySe-5b-D8t"/>
@@ -67,13 +67,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Made with love in Alex, Egypt" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dH-qY-SFo">
-                                <rect key="frame" x="20" y="805" width="374" height="17"/>
+                                <rect key="frame" x="20" y="610" width="335" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHj-gt-EkS">
-                                <rect key="frame" x="10" y="54" width="50" height="50"/>
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="6MY-WL-gTB"/>
                                     <constraint firstAttribute="width" constant="50" id="Ylz-th-kPT"/>
@@ -121,11 +121,11 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="FiH-fi-3b6" customClass="SettingsViewController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cp0-68-W9L">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VwP-ad-Djk">
-                                <rect key="frame" x="0.0" y="54" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="10" width="375" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="FiH-fi-3b6" id="zMp-Md-IZW"/>
@@ -156,39 +156,34 @@
             <objects>
                 <viewController storyboardIdentifier="ChangeTimeIntervalViewController" id="MF9-rE-Ois" customClass="ChangeTimeIntervalViewController" customModule="Advicee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nfv-r2-dLi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="1800" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRC-PG-45R">
-                                <rect key="frame" x="20" y="646" width="374" height="216"/>
+                                <rect key="frame" x="20" y="451" width="335" height="216"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="timeDidChange:event:" destination="MF9-rE-Ois" eventType="valueChanged" id="2en-Zp-F6D"/>
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your advice will be delivered every" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PF0-9J-Qd0">
-                                <rect key="frame" x="20" y="115" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="20" y="71" width="335" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Time Interval" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiZ-RT-iAc">
-                                <rect key="frame" x="20" y="147" width="374" height="37.666666666666657"/>
+                                <rect key="frame" x="20" y="102" width="335" height="37.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time interval at which we will send you a new advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-qt-YzZ">
-                                <rect key="frame" x="20" y="429.66666666666669" width="374" height="47"/>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nY-9d-m0A">
-                                <rect key="frame" x="20" y="526.66666666666663" width="374" height="50"/>
+                                <rect key="frame" x="20" y="371" width="335" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Rpc-ff-lb4"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <state key="normal" title="Auto select time interval">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -196,26 +191,32 @@
                                     <action selector="didTapAuto:" destination="MF9-rE-Ois" eventType="touchUpInside" id="4YI-7s-nMR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time interval at which we will send you a new advice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXb-qt-YzZ">
+                                <rect key="frame" x="20" y="227.5" width="335" height="42.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jgb-tA-LYQ"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="cXb-qt-YzZ" secondAttribute="trailing" constant="20" id="0WM-Ok-PBR"/>
+                            <constraint firstItem="1nY-9d-m0A" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="oRC-PG-45R" secondAttribute="leading" id="1Tx-iL-NUV"/>
+                            <constraint firstItem="1nY-9d-m0A" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oRC-PG-45R" secondAttribute="trailing" id="3Bq-cq-p1K"/>
                             <constraint firstItem="PF0-9J-Qd0" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="9vQ-8b-21x"/>
-                            <constraint firstItem="1nY-9d-m0A" firstAttribute="centerX" secondItem="cXb-qt-YzZ" secondAttribute="centerX" id="DIx-TW-6Er"/>
-                            <constraint firstItem="1nY-9d-m0A" firstAttribute="top" secondItem="cXb-qt-YzZ" secondAttribute="bottom" constant="50" id="ITP-iB-Hd4"/>
                             <constraint firstItem="PF0-9J-Qd0" firstAttribute="centerX" secondItem="jgb-tA-LYQ" secondAttribute="centerX" id="Qc0-06-vyZ"/>
-                            <constraint firstItem="1nY-9d-m0A" firstAttribute="trailing" secondItem="cXb-qt-YzZ" secondAttribute="trailing" id="T8t-as-X6I"/>
-                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="UYz-G2-MsV"/>
                             <constraint firstItem="oRC-PG-45R" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="X8O-To-1MP"/>
+                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="top" secondItem="CiZ-RT-iAc" secondAttribute="bottom" multiplier="0.7" constant="130" id="XEb-NE-YNH"/>
                             <constraint firstItem="PF0-9J-Qd0" firstAttribute="top" secondItem="jgb-tA-LYQ" secondAttribute="top" constant="71" id="YLh-H7-MCp"/>
-                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="centerX" secondItem="jgb-tA-LYQ" secondAttribute="centerX" id="f13-5e-6yf"/>
+                            <constraint firstItem="oRC-PG-45R" firstAttribute="top" secondItem="1nY-9d-m0A" secondAttribute="bottom" constant="30" id="cKU-ev-ptw"/>
+                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="centerX" secondItem="CiZ-RT-iAc" secondAttribute="centerX" id="fyh-XJ-JC5"/>
                             <constraint firstItem="CiZ-RT-iAc" firstAttribute="top" secondItem="PF0-9J-Qd0" secondAttribute="bottom" constant="8" id="i92-v8-ZWX"/>
-                            <constraint firstItem="1nY-9d-m0A" firstAttribute="leading" secondItem="cXb-qt-YzZ" secondAttribute="leading" id="iTy-Cc-arQ"/>
-                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="centerY" secondItem="jgb-tA-LYQ" secondAttribute="centerY" id="mLh-Hd-c7J"/>
+                            <constraint firstItem="1nY-9d-m0A" firstAttribute="centerX" secondItem="oRC-PG-45R" secondAttribute="centerX" id="iev-tH-EVc"/>
+                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="trailing" secondItem="CiZ-RT-iAc" secondAttribute="trailing" id="kQz-Sb-6wc"/>
                             <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="CiZ-RT-iAc" secondAttribute="trailing" constant="20" id="oG2-Ne-QmD"/>
                             <constraint firstItem="CiZ-RT-iAc" firstAttribute="leading" secondItem="jgb-tA-LYQ" secondAttribute="leading" constant="20" id="vBN-Tq-mEt"/>
                             <constraint firstItem="jgb-tA-LYQ" firstAttribute="bottom" secondItem="oRC-PG-45R" secondAttribute="bottom" id="vh8-oq-reu"/>
+                            <constraint firstItem="cXb-qt-YzZ" firstAttribute="leading" secondItem="CiZ-RT-iAc" secondAttribute="leading" id="xM1-Mo-s5L"/>
                             <constraint firstItem="jgb-tA-LYQ" firstAttribute="trailing" secondItem="oRC-PG-45R" secondAttribute="trailing" constant="20" id="xni-cJ-1Jm"/>
                         </constraints>
                     </view>

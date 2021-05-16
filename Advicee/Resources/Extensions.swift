@@ -99,9 +99,13 @@ extension UIView {
 
 extension FAKIcon {
     public func getImage(with size: CGFloat? = nil, color: UIColor? = nil) -> UIImage {
-        self.addAttribute(NSAttributedString.Key.foregroundColor.rawValue, value: color ?? UIColor.white)
+        changeColor(with: color ?? .white)
         let size = size ?? CGFloat(iconFontSize)
         return self.image(with: CGSize(width: size, height: size))
+    }
+    
+    public func changeColor(with color: UIColor) {
+        self.addAttribute(NSAttributedString.Key.foregroundColor.rawValue, value: color)
     }
 }
 
