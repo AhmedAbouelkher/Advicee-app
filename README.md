@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="screenshots/advicee_icon_logo.png"><br>
+  <img src="screenshots/logo_120x120.png"><br>
   <a href="https://apps.apple.com/us/app/advicee/id1567107568"><span>Advicee</span></a><br>
 </h1>
 
